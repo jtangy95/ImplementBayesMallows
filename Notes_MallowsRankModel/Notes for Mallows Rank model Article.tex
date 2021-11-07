@@ -98,7 +98,7 @@
     \begin{align*}
     \because Z_n(\alpha, \boldsymbol{\rho}) &= \sum_{\mathbf{r}\in \mathcal{P}_n}\exp\{-\frac{\alpha}{n}d(\mathbf{r},\boldsymbol{\rho})\} = \sum_{\mathbf{r}\in \mathcal{P}_n}\exp\{-\frac{\alpha}{n}d(\mathbf{r} \boldsymbol{\rho}^{-1}, \mathbf{1}_n)\}=\sum_{\mathbf{r'}\in \mathcal{P}_n}\exp\{-\frac{\alpha}{n}d(\mathbf{r'},\mathbf{1}_n)\} \\ Z_n(\alpha, \boldsymbol{\rho}) &= Z_n(\alpha)=\sum_{\mathbf{r}\in \mathcal{P}_n}\exp\{-\frac{\alpha}{n}d(\mathbf{r},\mathbf{1}_n)\}
     \end{align*}
-    \item For some choice of right-invariant distance like Kendall distnace, the partition function can be analytically computed. 
+    \item For some choice of right-invariant distance like Kendall distance, the partition function can be analytically computed. 
     \item But there are important and natural right-invariant distances for which the computation of the partition function is not feasible, such as the footrule distance and the Spearman's distance.
 \end{itemize}
 \subsection{Prior distributions}
@@ -113,7 +113,7 @@
     \begin{equation}
         P(\boldsymbol{\rho}, \alpha| \mathbf{R}_1, \cdots, \mathbf{R}_N)\propto \frac{\pi(\boldsymbol{\rho})\pi(\alpha)}{Z_n(\alpha)^N} \exp \big\{-\frac{\alpha}{n}\sum_{j=1}^N d(\mathbf{R}_j, \boldsymbol{\rho})\big\}
     \end{equation}
-    \item Note that marginal posterior mode of $\boldsymbol{\rho}$ from (1) does not depend on $\alpha$ and in case of uniform prior for $\boldsymbol{\rho}$, it coincides with the the MLE of $\boldsymbol{\rho}$. 
+    \item Note that marginal posterior mode of $\boldsymbol{\rho}$ from (2) does not depend on $\alpha$ and in case of uniform prior for $\boldsymbol{\rho}$, it coincides with the the MLE of $\boldsymbol{\rho}$ in (1). 
     \item The marginal posterior distribution of $\boldsymbol{\rho}$ is given by 
     \begin{equation}
         P(\boldsymbol{\rho} | \mathbf{R}_1, \cdots, \mathbf{R}_N)\propto \pi(\boldsymbol{\rho})\int_0^\infty \frac{\pi(\alpha)}{Z_n(\alpha)^N} \exp \big\{-\frac{\alpha}{n}\sum_{j=1}^N d(\mathbf{R}_j, \boldsymbol{\rho})\big\}\, d\alpha
@@ -135,10 +135,10 @@
         \item Proposal distribution $J_s$ should be chosen to satisfy that the Markov chain is irreducible, aperiodic, and recurrent. 
         \item By Ergodic Thm, the empirical distribution of samples generated from such a Markov chain will converge to the stationary distribution( of the Markov chain), which agrees with the target distribution.
     \end{itemize}
-    To obtain samples from the posterior in (1), we iterate between two steps.
+    To obtain samples from the posterior in (2), we iterate between two steps.
     \begin{enumerate}
-        \item Given $\alpha$ and $\rho$, update $\boldsymbol{\rho}$ by proposing $\boldsymbol{\rho}'$
-        \item Then, given $\alpha$ and $\rho$, update $\alpha$ by proposing $\alpha'$
+        \item Given $\alpha$ and $\boldsymbol{\rho}$, update $\boldsymbol{\rho}$ by proposing $\boldsymbol{\rho}'$
+        \item Then, given $\alpha$ and $\boldsymbol{\rho}'$, update $\alpha$ by proposing $\alpha'$
     \end{enumerate}
     \item Updating $\boldsymbol{\rho}$ 
     \begin{itemize}
@@ -189,14 +189,14 @@
             \begin{align*}
                 P_L(\boldsymbol{\rho}'|\boldsymbol{\rho}) &= \sum_{u=1}^n P_L(\boldsymbol{\rho}'|U=u, \boldsymbol{\rho})P(U=u) \\ &= \frac{1}{n}\sum_{u=1}^n I(\boldsymbol{\rho}', \boldsymbol{\rho}, u) \frac{1}{|S^{(u)}|}
             \end{align*}
-            where $I(\boldsymbol{\rho}', \boldsymbol{\rho}, u)$ is an indicator for possibility of proposal from $\boldsymbol{\rho}$ to $\boldsymbol{\rho}'$ given $u$ is drawed and $S^{(u)}$ is the set $S$ given $u$ is drawed \\ If $\boldsymbol{\rho}'$ is proposed from $\boldsymbol{\rho}$ then typically $I(\boldsymbol{\rho}', \boldsymbol{\rho}, u)=1$ for only one $u$ but if $|\boldsymbol{\rho}_u'-\boldsymbol{\rho}_u|=1$ then $I(\boldsymbol{\rho}', \boldsymbol{\rho}, u')=1$ also holds for unique $u'$ other than $u$ 
+            where $I(\boldsymbol{\rho}', \boldsymbol{\rho}, u)$ is an indicator for possibility of proposal from $\boldsymbol{\rho}$ to $\boldsymbol{\rho}'$ given $u$ is drawed and $S^{(u)}$ is the set $S$ given $u$ is drawed \\ If $\boldsymbol{\rho}'$ is proposed from $\boldsymbol{\rho}$ then typically $I(\boldsymbol{\rho}', \boldsymbol{\rho}, u)=1$ for only one $u$ but if $|\boldsymbol{\rho}_u'-\boldsymbol{\rho}_u|=1$ then $I(\boldsymbol{\rho}', \boldsymbol{\rho}, u')=1$ also holds for another $u'$ different from $u$ 
         \end{itemize} 
         \item The acceptance probability when updating $\boldsymbol{\rho}$ is 
         $\min\{1, r\}$ where $r$ is given as 
         \begin{align*}
             r &=\frac{P(\boldsymbol{\rho}', \alpha | \mathbf{R})}{P(\boldsymbol{\rho}, \alpha | \mathbf{R})}\cdot \frac{P_L(\boldsymbol{\rho}|\boldsymbol{\rho}')}{P_L(\boldsymbol{\rho}'|\boldsymbol{\rho})} \\ &= \frac{P_L(\boldsymbol{\rho}|\boldsymbol{\rho}')}{P_L(\boldsymbol{\rho}'|\boldsymbol{\rho})} \cdot \frac{\pi(\boldsymbol{\rho}')}{\pi(\boldsymbol{\rho})}\exp\big\{-\frac{\alpha}{n}\sum_{j=1}^N \big[d(\mathbf{R}_j, \boldsymbol{\rho}')-d(\mathbf{R}_j, \boldsymbol{\rho})\big] \big\}
         \end{align*} 
-        \item[\rmk] The term $\sum_{j=1}^N \big[d(\mathbf{R}_j, \boldsymbol{\rho}')-d(\mathbf{R}_j, \boldsymbol{\rho})\big]$ above can be computed efficiently since most elements of $\boldsymbol{\rho}$ and $\boldsymbol{\rho}'$ are equal and we can put aside indices $i\in E$ s.t. $\rho_i=\rho'_i \; \forall \, i\in$
+        \item[\rmk] The term $\sum_{j=1}^N \big[d(\mathbf{R}_j, \boldsymbol{\rho}')-d(\mathbf{R}_j, \boldsymbol{\rho})\big]$ above can be computed efficiently since most elements of $\boldsymbol{\rho}$ and $\boldsymbol{\rho}'$ are equal and we can put aside indices $i$ s.t. $\rho_i=\rho'_i$
         \item $L$ is a tuning parameter for MCMC algorithm.  
     \end{itemize}
     \item Updating $\alpha$
@@ -250,7 +250,7 @@
         \item The more $q(\mathbf{R})$ resembles the Mallows likelihood $P(\mathbf{R}^k | \alpha, \mathbf{1}_n)$, the smaller is the variance of $\hat{Z}_n(\alpha)$. 
         \item We shall use the following psuedo-likelihood approximation for $q(\mathbf{R})$
         \begin{enumerate}
-            \item Sample $\{i_1, \cdots, i_n\}\in \mathcal{P}_n$, which gives the order of the psuedo-lieklihood factorization.
+            \item Sample $(i_1, \cdots, i_n)\in \mathcal{P}_n$, which gives the order of the psuedo-lieklihood factorization.
             \item Factorization is given as \begin{equation*}
                 P(\mathbf{R}|\mathbf{1}_n)=P(R_{i_n}|\mathbf{1}_n)P(R_{i_{n-1}}|R_{i_n}, \mathbf{1}_n)\cdots P(R_{i_2}|R_{i_3}, \cdots, R_{i_n}, \mathbf{1}_n)P(R_{i_1}|R_{i_2}, \cdots, R_{i_n}, \mathbf{1}_n)
             \end{equation*}
@@ -279,7 +279,7 @@
     \item Theoretical results regarding the convergence of the MCMC, when using the IS approximation of the partition function.
     \item Algorithm using $\hat{Z}_n$ instead of $Z_n$ converges to the posterior distribution proportional to \begin{equation} \frac{1}{\hat{C}(\mathbf{R})}\frac{\pi(\boldsymbol{\rho})\pi(\alpha)}{\hat{Z}_n(\alpha)^N} \exp \big\{-\frac{\alpha}{n}\sum_{j=1}^N d(\mathbf{R}_j, \boldsymbol{\rho})\big\} \end{equation} where the normalizing factor $\hat{C}(\mathbf{R})=\int\sum_{\boldsymbol{\rho}\in \mathcal{P}_n}\frac{\pi(\boldsymbol{\rho})\pi(\alpha)}{\hat{Z}_n(\alpha)^N} \exp \big\{-\frac{\alpha}{n}\sum_{j=1}^N d(\mathbf{R}_j, \boldsymbol{\rho})\big\}\, d\alpha $
     \item The approximate posterior (5) converges to the correct posterior (2), if $K$ increases with $N$, $K=K(N)$ and $$\lim_{N \to \infty}(\frac{\hat{Z}_n^{K(N)}(\alpha)}{Z_n(\alpha)})^N =1 \quad \forall \; \alpha$$
-    \item For this, it is sufficient that $K(N)$ grows faster than $N^2$.
+    \item For this, it is sufficient that $K(N)$ grows faster than $c\cdot N^2$ where $c$ depends on $\alpha, n, d( \;,\; )$ 
 \end{itemize}
 \subsection{Testing Approximations of the MCMC in Inference}
 \begin{itemize}
@@ -309,7 +309,7 @@
     \end{itemize}
     \item MCMC algorithm
     \begin{itemize}
-        \item $\mathcal{S}_j$ : set of all possible augmented random vectors given original partially ranked items together with the allowable 'fill-ins' of the missing ranks, for each $j=1, \cdots, N$
+        \item $\mathcal{S}_j$ : set of all possible augmented random vectors given original partially ranked items together with the allowable `fill-ins' of the missing ranks, for each $j=1, \cdots, N$
         \item Our goal is to sample from the posterior distribution \begin{equation*}
             P(\alpha, \boldsymbol{\rho}\, |\, \mathbf{R}_1, \cdots, \mathbf{R}_N)=\sum_{\tilde{\mathbf{R}}_1\in \mathcal{S}_1}\cdots \sum_{\tilde{\mathbf{R}}_N\in \mathcal{S}_N}P(\alpha, \boldsymbol{\rho}, \tilde{\mathbf{R}}_1, \cdots,\tilde{\mathbf{R}}_N\, |\, \mathbf{R}_1, \cdots, \mathbf{R}_N )
         \end{equation*}
@@ -319,7 +319,7 @@
             \item sampling $\alpha$ and $\boldsymbol{\rho}$ given the current values of the augmented ranks.
         \end{enumerate}
         \item The latter is done similar as in Section 2.4, where in this case $\mathbf{R}_1, \cdots, \mathbf{R}_N$ is replaced by $\tilde{\mathbf{R}}_1, \cdots,\tilde{\mathbf{R}}_N$ 
-        \item For the former, given the current $\tilde{\mathbf{R}}_j$ (which embeds info contained in $\mathbf{R}_j$) and the current values of $\alpha$ and $\boldsymbol{\rho}$. $\tilde{\mathbf{R}}_j'$ is sampled in $\mathcal{S}_j$ from a uniform proposal distribution which is obviously symmetric.
+        \item For the former, given the current $\tilde{\mathbf{R}}_j$ (which embeds info contained in $\mathbf{R}_j$) and the current values of $\alpha$ and $\boldsymbol{\rho}$, $\tilde{\mathbf{R}}_j'$ is sampled in $\mathcal{S}_j$ from a uniform proposal distribution which is obviously symmetric.
         \\ The proposed $\tilde{\mathbf{R}}_j'$ is accepted with probability $\min\{1,r\}$ with \begin{align*}
             r&= \frac{P(\tilde{\mathbf{R}}_1, \cdots, \tilde{\mathbf{R}}_j',\cdots, \tilde{\mathbf{R}}_N\,|\, \alpha, \boldsymbol{\rho})}{P(\tilde{\mathbf{R}}_1, \cdots, \tilde{\mathbf{R}}_j,\cdots, \tilde{\mathbf{R}}_N\,|\, \alpha, \boldsymbol{\rho})} \\ &=\exp[-\frac{\alpha}{n}\big\{d(\tilde{\mathbf{R}}_j', \boldsymbol{\rho})-d(\tilde{\mathbf{R}}_j, \boldsymbol{\rho}) \big\}] \end{align*}
     \end{itemize}
@@ -388,7 +388,7 @@
 \subsection{Clustering Assessors based on their Rankings of All Items}
 \begin{itemize}
     \item So far we have assumed that there exists a unique consensus ranking shared by all assessors. 
-    \item The possibility of dividing assessors into more homogeneous subsets, eah sharing a consesnsus ranking of the items, brings the model closer to reality. 
+    \item The possibility of dividing assessors into more homogeneous subsets, each sharing a consesnsus ranking of the items, brings the model closer to reality. 
     \item We introduce a mixture of Mallows models to handle heterogeneity.
     \begin{itemize}
         \item Assume that the data consist of complete rankings.
@@ -402,14 +402,14 @@
         \begin{enumerate}
             \item $\boldsymbol{\rho}_1, \cdots \boldsymbol{\rho}_C \overset{indep}{\sim} \pi_{\boldsymbol{\rho}}$ where $\pi_{\boldsymbol{\rho}}$ is a uniform prior on $\mathcal{P}_n$ as before.
             \item $\alpha_1, \cdots, \alpha_C \overset{indep}{\sim} \pi_\alpha$ where $\pi_\alpha$ is a truncated exponential prior with shared $\lambda$
-            \item $\tau_c$ is the probability that an assessor belongs to the c-th cluster. \\ $\tau_c\geq 0 \quad \forall c=1,\cdots, C$ and $\sum_{c=1}^C \tau_c=1$. \; $(\tau_1, \cdots \tau_C)$ are assigned the standard symetric Dirichlet prior $\mathcal{D}(\psi, \cdots, \psi)$
+            \item $\tau_c$ is the probability that an assessor belongs to the c-th cluster. \\ $\tau_c\geq 0 \quad \forall c=1,\cdots, C$ and $\sum_{c=1}^C \tau_c=1$. \; $(\tau_1, \cdots \tau_C)$ are assigned the standard symmetric Dirichlet prior $\mathcal{D}(\psi, \cdots, \psi)$
             \item $P(z_j=c \,|\, \tau_1, \cdots, \tau_C)=\tau_c \quad \forall c=1,\cdots C$ and $z_1, \cdots z_N$ are conditionally i.i.d.
         \end{enumerate}
     \end{itemize}
     \item The number of clusters $C$ is often not known, and the selection of $C$ can be based on different criteria.
     \begin{itemize}
         \item Here we use the posterior distribution of the within-cluster sum of distances of the observed ranks from the corresponding cluster consensus.
-        \item We expect to observe an 'elbow' in the within-cluster distance posterior distribution as a function of $C$, identifying the optimal number of clusters. \\ (cf. Figure 6 in Section 4.4 )
+        \item We expect to observe an `elbow' in the within-cluster distance posterior distribution as a function of $C$, identifying the optimal number of clusters. \\ (cf. Figure 6 in Section 4.4 )
     \end{itemize}
     \item MCMC algorithm
     \begin{itemize}
@@ -433,7 +433,7 @@
 \subsection{Example : Preference Prediction}
 \begin{itemize}
     \item Situation : assessors have been asked to respond to some queries containing different sets of pairwise comparisons. One may then ask how the assesssors would have ranked for pairwise comparisons when such comparison could not be concluded directly from the data they provided. 
-    \item For example, if assessor $j$ did not compare $A_1$ to $A_2$. we might be interested in computing $P(A_1\prec_j A_2 \,|\, data)$, the predictive probability that this assessor would have preferred item $A_2$ to item $A_1$. This probability is then readily obtained from the MCMC output as a marginal of the posterior $P(\tilde{\mathbf{R}_j}\,|\,data)$ \\ i.e. If we have $10^5$ MCMC posterior outputs for $\tilde{\mathbf{R}_j}$ then compute the ratio of the number of outputs satisfying $A_1\prec_j A_2$ to the number of total outputs,$10^5$. 
+    \item For example, suppose assessor $j$ did not compare $A_1$ to $A_2$. We might be interested in computing $P(A_1\prec_j A_2 \,|\, data)$, the predictive probability that this assessor would have preferred item $A_2$ to item $A_1$. This probability is then readily obtained from the MCMC output as a marginal of the posterior $P(\tilde{\mathbf{R}_j}\,|\,data)$ \\ i.e. If we have $10^5$ MCMC posterior outputs for $\tilde{\mathbf{R}_j}$ then compute the ratio of the number of outputs satisfying $A_1\prec_j A_2$ to the number of total outputs, $10^5$. 
     \item Proceed small simulated experiment to illustrate how this is possible
     \item Generate data from a mixture of Mallows model with three clusters ($C=3$) which yields $\tilde{\mathbf{R}}_{j,true}$ and number of pair comparisons $T_j$ for each $j=1, \cdots, N$
     \item Using algorithm combining the one in section 4.1 and the other in section 4.3, we get MCMC posterior output for $(\boldsymbol{\rho}_1, \cdots, \boldsymbol{\rho}_C), (\alpha_1, \cdots, \alpha_C), (\tau_1, \cdots, \tau_C), (z_1, \cdots, z_N)$ and $(\tilde{\mathbf{R}}_1, \cdots, \tilde{\mathbf{R}}_N)$
