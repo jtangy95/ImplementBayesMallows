@@ -135,7 +135,7 @@
         \item Proposal distribution $J_s$ should be chosen to satisfy that the Markov chain is irreducible, aperiodic, and recurrent. 
         \item By Ergodic Thm, the empirical distribution of samples generated from such a Markov chain will converge to the stationary distribution( of the Markov chain), which agrees with the target distribution.
     \end{itemize}
-    To obtain samples from the posterior in (2), we iterate between two steps.
+    To obtain samples from the posterior in (2), we alternate between two steps.
     \begin{enumerate}
         \item Given $\alpha$ and $\boldsymbol{\rho}$, update $\boldsymbol{\rho}$ by proposing $\boldsymbol{\rho}'$
         \item Then, given $\alpha$ and $\boldsymbol{\rho}'$, update $\alpha$ by proposing $\alpha'$

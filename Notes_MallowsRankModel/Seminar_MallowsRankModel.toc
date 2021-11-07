@@ -1,0 +1,2 @@
+\beamer@sectionintoc {1}{Motivation}{3}{0}{1}
+\beamer@sectionintoc {2}{A Bayesian Mallows model for complete rankings}{7}{0}{2}
