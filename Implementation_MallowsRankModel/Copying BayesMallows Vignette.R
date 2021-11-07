@@ -77,7 +77,7 @@ compute_posterior_intervals(bmm_beaches, parameter='rho')
 compute_consensus(bmm_beaches, type='CP')
 compute_consensus(bmm_beaches, type='MAP')
 
-plot_top_k(bmm_beaches)
+plot_top_k(bmm_beaches, k=3) # k=3 is default
 predict_top_k(bmm_beaches)
 
 predict_top_k(bmm_beaches) %>%
