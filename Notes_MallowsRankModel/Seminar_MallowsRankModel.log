@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.7.23)  8 NOV 2021 04:03
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.8.12)  9 NOV 2021 00:52
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**/Users/temporaryadministrator/Desktop/Mallows_Rank_Model/ImplementBayesMallows/Notes_MallowsRankModel/Seminar_MallowsRankModel.tex
-(/Users/temporaryadministrator/Desktop/Mallows_Rank_Model/ImplementBayesMallows/Notes_MallowsRankModel/Seminar_MallowsRankModel.tex
+**/Users/changtaeyeong/Desktop/BayesMallowsRankModel/ImplementBayesMallows/Notes_MallowsRankModel/Seminar_MallowsRankModel.tex
+(/Users/changtaeyeong/Desktop/BayesMallowsRankModel/ImplementBayesMallows/Notes_MallowsRankModel/Seminar_MallowsRankModel.tex
 LaTeX2e <2020-10-01> patch level 4
 L3 programming layer <2021-02-18> (/usr/local/texlive/2021/texmf-dist/tex/latex/beamer/beamer.cls
 Document Class: beamer 2021/03/19 v3.62 A class for typesetting presentations
@@ -614,53 +614,73 @@ Package caption Info: Hyperref support is turned off
 )
 \c@subfigure=\count324
 \c@subtable=\count325
-) (/usr/local/texlive/2021/texmf-dist/tex/latex/arydshln/arydshln.sty
+) (/usr/local/texlive/2021/texmf-dist/tex/generic/babel/babel.sty
+Package: babel 2021/03/24 3.56 The Babel package
+ (/usr/local/texlive/2021/texmf-dist/tex/generic/babel/babel.def
+File: babel.def 2021/03/24 3.56 Babel common definitions
+\babel@savecnt=\count326
+\U@D=\dimen291
+\l@babelnohyphens=\language87
+ (/usr/local/texlive/2021/texmf-dist/tex/generic/babel/txtbabel.def)
+\bbl@readstream=\read3
+)
+LaTeX Info: Redefining \textlatin on input line 717.
+\bbl@dirlevel=\count327
+ (/usr/local/texlive/2021/texmf-dist/tex/generic/babel-english/english.ldf
+Language: english 2017/06/06 v3.3r English support from the babel system
+Package babel Info: \l@canadian = using hyphenrules for english
+(babel)             (\language0) on input line 102.
+Package babel Info: \l@australian = using hyphenrules for ukenglish
+(babel)             (\language21) on input line 105.
+Package babel Info: \l@newzealand = using hyphenrules for ukenglish
+(babel)             (\language21) on input line 108.
+)) (/usr/local/texlive/2021/texmf-dist/tex/latex/arydshln/arydshln.sty
 Package: arydshln 2019/02/21 v1.76 
-\dashlinedash=\dimen291
-\dashlinegap=\dimen292
+\dashlinedash=\dimen292
+\dashlinegap=\dimen293
 \adl@box=\box72
-\adl@height=\dimen293
-\adl@heightsave=\dimen294
-\adl@depth=\dimen295
-\adl@depthsave=\dimen296
-\adl@finaldepth=\dimen297
-\adl@columns=\count326
-\adl@ncol=\count327
-\adl@currentcolumn=\count328
-\adl@currentcolumnsave=\count329
-\adl@totalheight=\count330
-\adl@totalheightsave=\count331
-\adl@dash=\count332
-\adl@gap=\count333
-\adl@cla=\count334
-\adl@clb=\count335
+\adl@height=\dimen294
+\adl@heightsave=\dimen295
+\adl@depth=\dimen296
+\adl@depthsave=\dimen297
+\adl@finaldepth=\dimen298
+\adl@columns=\count328
+\adl@ncol=\count329
+\adl@currentcolumn=\count330
+\adl@currentcolumnsave=\count331
+\adl@totalheight=\count332
+\adl@totalheightsave=\count333
+\adl@dash=\count334
+\adl@gap=\count335
+\adl@cla=\count336
+\adl@clb=\count337
 \adl@everyvbox=\toks44
-\adl@LTpagetotal=\dimen298
+\adl@LTpagetotal=\dimen299
 ) (/usr/local/texlive/2021/texmf-dist/tex/latex/booktabs/booktabs.sty
 Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
-\heavyrulewidth=\dimen299
-\lightrulewidth=\dimen300
-\cmidrulewidth=\dimen301
-\belowrulesep=\dimen302
-\belowbottomsep=\dimen303
-\aboverulesep=\dimen304
-\abovetopsep=\dimen305
-\cmidrulesep=\dimen306
-\cmidrulekern=\dimen307
-\defaultaddspace=\dimen308
-\@cmidla=\count336
-\@cmidlb=\count337
-\@aboverulesep=\dimen309
-\@belowrulesep=\dimen310
-\@thisruleclass=\count338
-\@lastruleclass=\count339
-\@thisrulewidth=\dimen311
+\heavyrulewidth=\dimen300
+\lightrulewidth=\dimen301
+\cmidrulewidth=\dimen302
+\belowrulesep=\dimen303
+\belowbottomsep=\dimen304
+\aboverulesep=\dimen305
+\abovetopsep=\dimen306
+\cmidrulesep=\dimen307
+\cmidrulekern=\dimen308
+\defaultaddspace=\dimen309
+\@cmidla=\count338
+\@cmidlb=\count339
+\@aboverulesep=\dimen310
+\@belowrulesep=\dimen311
+\@thisruleclass=\count340
+\@lastruleclass=\count341
+\@thisrulewidth=\dimen312
 ) (/usr/local/texlive/2021/texmf-dist/tex/latex/multirow/multirow.sty
 Package: multirow 2021/03/15 v2.8 Span multiple rows of a table
 \multirow@colwidth=\skip64
-\multirow@cntb=\count340
+\multirow@cntb=\count342
 \multirow@dima=\skip65
-\bigstrutjot=\dimen312
+\bigstrutjot=\dimen313
 ) (/usr/local/texlive/2021/texmf-dist/tex/latex/cjk-ko/kotex.sty
 Package: kotex 2015/04/19 v1.6 Korean TeX (ko.TeX)
  (/usr/local/texlive/2021/texmf-dist/tex/latex/kotex-utf/kotex.cfg) (/usr/local/texlive/2021/texmf-dist/tex/latex/kotex-utf/kotexutf.sty
@@ -670,8 +690,8 @@ Package: inputenc 2020/08/01 v1.3d Input encoding file
 \inpenc@prehook=\toks45
 \inpenc@posthook=\toks46
 ) (/usr/local/texlive/2021/texmf-dist/tex/plain/kotex-plain/kotexutf-core.tex
-\unih@ngulpoint=\count341
-\dhucs@emph@raise=\dimen313
+\unih@ngulpoint=\count343
+\dhucs@emph@raise=\dimen314
 )
 Now handling font encoding LUC ...
 ... processing UTF-8 mapping file for font encoding LUC
@@ -723,7 +743,7 @@ File: lucenc.dfu 2007/09/05 UTF-8 support for dhucs
    defining Unicode char U+FF64 (decimal 65380)
    defining Unicode char U+FF65 (decimal 65381)
 )
-\@josa=\count342
+\@josa=\count344
 \josatoks=\toks47
  (/usr/local/texlive/2021/texmf-dist/tex/latex/cjk-ko/kolabels-utf.sty
 Package: kolabels-utf 2015/03/20 v1.5 UTF-8 Hangul item labels
@@ -733,7 +753,7 @@ Package: physics
 Package: expl3 2021-02-18 L3 programming layer (loader) 
  (/usr/local/texlive/2021/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2021-03-18 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count343
+\l__color_backend_stack_int=\count345
 \l__pdf_internal_box=\box73
 )) (/usr/local/texlive/2021/texmf-dist/tex/latex/l3packages/xparse/xparse-2020-10-01.sty (/usr/local/texlive/2021/texmf-dist/tex/latex/l3packages/xparse/xparse-generic.tex)))) (/usr/local/texlive/2021/texmf-dist/tex/latex/natbib/bibentry.sty
 Package: bibentry 2007/10/30 1.5 (PWD)
@@ -742,34 +762,36 @@ Package: natbib 2010/09/13 8.31b (PWD, AO)
 \bibhang=\skip66
 \bibsep=\skip67
 LaTeX Info: Redefining \cite on input line 694.
-\c@NAT@ctr=\count344
-) (/usr/local/texlive/2021/texmf-dist/tex/latex/beamer/beamerthemeMadrid.sty (/usr/local/texlive/2021/texmf-dist/tex/latex/beamer/beamercolorthemewhale.sty) (/usr/local/texlive/2021/texmf-dist/tex/latex/beamer/beamercolorthemeorchid.sty) (/usr/local/texlive/2021/texmf-dist/tex/latex/beamer/beamerinnerthemerounded.sty) (/usr/local/texlive/2021/texmf-dist/tex/latex/beamer/beamerouterthemeinfolines.sty)) (/usr/local/texlive/2021/texmf-dist/tex/latex/beamer/beamercolorthemerose.sty) (/Users/temporaryadministrator/Desktop/Mallows_Rank_Model/ImplementBayesMallows/Notes_MallowsRankModel/Seminar_MallowsRankModel.aux)
+\c@NAT@ctr=\count346
+)
+Package hyperref Info: Option `colorlinks' set `true' on input line 38.
+ (/usr/local/texlive/2021/texmf-dist/tex/latex/beamer/beamerthemeMadrid.sty (/usr/local/texlive/2021/texmf-dist/tex/latex/beamer/beamercolorthemewhale.sty) (/usr/local/texlive/2021/texmf-dist/tex/latex/beamer/beamercolorthemeorchid.sty) (/usr/local/texlive/2021/texmf-dist/tex/latex/beamer/beamerinnerthemerounded.sty) (/usr/local/texlive/2021/texmf-dist/tex/latex/beamer/beamerouterthemeinfolines.sty)) (/usr/local/texlive/2021/texmf-dist/tex/latex/beamer/beamercolorthemerose.sty) (/Users/changtaeyeong/Desktop/BayesMallowsRankModel/ImplementBayesMallows/Notes_MallowsRankModel/Seminar_MallowsRankModel.aux)
 \openout1 = `Seminar_MallowsRankModel.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 335.
-LaTeX Font Info:    ... okay on input line 335.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 335.
-LaTeX Font Info:    ... okay on input line 335.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 335.
-LaTeX Font Info:    ... okay on input line 335.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 335.
-LaTeX Font Info:    ... okay on input line 335.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 335.
-LaTeX Font Info:    ... okay on input line 335.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 335.
-LaTeX Font Info:    ... okay on input line 335.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 335.
-LaTeX Font Info:    ... okay on input line 335.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 335.
-LaTeX Font Info:    ... okay on input line 335.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 335.
-LaTeX Font Info:    ... okay on input line 335.
-LaTeX Font Info:    Checking defaults for LUC/nanummj/m/n on input line 335.
-LaTeX Font Info:    Trying to load font information for LUC+nanummj on input line 335.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 345.
+LaTeX Font Info:    ... okay on input line 345.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 345.
+LaTeX Font Info:    ... okay on input line 345.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 345.
+LaTeX Font Info:    ... okay on input line 345.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 345.
+LaTeX Font Info:    ... okay on input line 345.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 345.
+LaTeX Font Info:    ... okay on input line 345.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 345.
+LaTeX Font Info:    ... okay on input line 345.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 345.
+LaTeX Font Info:    ... okay on input line 345.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 345.
+LaTeX Font Info:    ... okay on input line 345.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 345.
+LaTeX Font Info:    ... okay on input line 345.
+LaTeX Font Info:    Checking defaults for LUC/nanummj/m/n on input line 345.
+LaTeX Font Info:    Trying to load font information for LUC+nanummj on input line 345.
  (/usr/local/texlive/2021/texmf-dist/tex/latex/nanumtype1/lucnanummj.fd
 File: lucnanummj.fd 2013/02/12 v0.1 Nanum Myeongjo font definitions
 )
-LaTeX Font Info:    ... okay on input line 335.
+LaTeX Font Info:    ... okay on input line 345.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -807,16 +829,16 @@ LaTeX Font Info:    ... okay on input line 335.
 
 (/usr/local/texlive/2021/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count345
-\scratchdimen=\dimen314
+\scratchcounter=\count347
+\scratchdimen=\dimen315
 \scratchbox=\box74
-\nofMPsegments=\count346
-\nofMParguments=\count347
+\nofMPsegments=\count348
+\nofMParguments=\count349
 \everyMPshowfont=\toks48
-\MPscratchCnt=\count348
-\MPscratchDim=\dimen315
-\MPnumerator=\count349
-\makeMPintoPDFobject=\count350
+\MPscratchCnt=\count350
+\MPscratchDim=\dimen316
+\MPnumerator=\count351
+\makeMPintoPDFobject=\count352
 \everyMPtoPDFconversion=\toks49
 ) (/usr/local/texlive/2021/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
@@ -824,7 +846,7 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 48
  (/usr/local/texlive/2021/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
-Package hyperref Info: Link coloring OFF on input line 335.
+Package hyperref Info: Link coloring ON on input line 345.
  (/usr/local/texlive/2021/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
  (/usr/local/texlive/2021/texmf-dist/tex/latex/refcount/refcount.sty
@@ -832,64 +854,64 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 ) (/usr/local/texlive/2021/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count351
+\c@section@level=\count353
 )
-LaTeX Info: Redefining \ref on input line 335.
-LaTeX Info: Redefining \pageref on input line 335.
-LaTeX Info: Redefining \nameref on input line 335.
- (/Users/temporaryadministrator/Desktop/Mallows_Rank_Model/ImplementBayesMallows/Notes_MallowsRankModel/Seminar_MallowsRankModel.out) (/Users/temporaryadministrator/Desktop/Mallows_Rank_Model/ImplementBayesMallows/Notes_MallowsRankModel/Seminar_MallowsRankModel.out)
+LaTeX Info: Redefining \ref on input line 345.
+LaTeX Info: Redefining \pageref on input line 345.
+LaTeX Info: Redefining \nameref on input line 345.
+ (/Users/changtaeyeong/Desktop/BayesMallowsRankModel/ImplementBayesMallows/Notes_MallowsRankModel/Seminar_MallowsRankModel.out) (/Users/changtaeyeong/Desktop/BayesMallowsRankModel/ImplementBayesMallows/Notes_MallowsRankModel/Seminar_MallowsRankModel.out)
 \@outlinefile=\write5
 \openout5 = `Seminar_MallowsRankModel.out'.
 
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/cmr/m/n --> OT1/cmss/m/n on input line 335.
+(Font)                  OT1/cmr/m/n --> OT1/cmss/m/n on input line 345.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/cmr/bx/n --> OT1/cmss/b/n on input line 335.
+(Font)                  OT1/cmr/bx/n --> OT1/cmss/b/n on input line 345.
 \symnumbers=\mathgroup6
 \sympureletters=\mathgroup7
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `normal'
-(Font)                  OT1/cmss/m/n --> OT1/cmr/m/n on input line 335.
-LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 335.
+(Font)                  OT1/cmss/m/n --> OT1/cmr/m/n on input line 345.
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 345.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/cmr/bx/n --> OT1/cmss/b/n on input line 335.
+(Font)                  OT1/cmr/bx/n --> OT1/cmss/b/n on input line 345.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
-(Font)                  OT1/cmr/bx/n --> OT1/cmss/b/n on input line 335.
-LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 335.
+(Font)                  OT1/cmr/bx/n --> OT1/cmss/b/n on input line 345.
+LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 345.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/cmss/m/n --> OT1/cmss/m/n on input line 335.
+(Font)                  OT1/cmss/m/n --> OT1/cmss/m/n on input line 345.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/cmss/bx/n --> OT1/cmss/m/n on input line 335.
-LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 335.
+(Font)                  OT1/cmss/bx/n --> OT1/cmss/m/n on input line 345.
+LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 345.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/cmr/m/it --> OT1/cmss/m/it on input line 335.
+(Font)                  OT1/cmr/m/it --> OT1/cmss/m/it on input line 345.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/cmr/bx/it --> OT1/cmss/m/it on input line 335.
-LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 335.
+(Font)                  OT1/cmr/bx/it --> OT1/cmss/m/it on input line 345.
+LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 345.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/cmtt/m/n --> OT1/cmtt/m/n on input line 335.
+(Font)                  OT1/cmtt/m/n --> OT1/cmtt/m/n on input line 345.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/cmtt/m/n --> OT1/cmtt/m/n on input line 335.
+(Font)                  OT1/cmtt/m/n --> OT1/cmtt/m/n on input line 345.
 LaTeX Font Info:    Overwriting symbol font `numbers' in version `bold'
-(Font)                  OT1/cmss/m/n --> OT1/cmss/b/n on input line 335.
+(Font)                  OT1/cmss/m/n --> OT1/cmss/b/n on input line 345.
 LaTeX Font Info:    Overwriting symbol font `pureletters' in version `bold'
-(Font)                  OT1/cmss/m/it --> OT1/cmss/b/it on input line 335.
+(Font)                  OT1/cmss/m/it --> OT1/cmss/b/it on input line 345.
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `bold'
-(Font)                  OT1/cmss/b/n --> OT1/cmr/b/n on input line 335.
+(Font)                  OT1/cmss/b/n --> OT1/cmr/b/n on input line 345.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
-(Font)                  OT1/cmss/b/n --> OT1/cmss/b/n on input line 335.
+(Font)                  OT1/cmss/b/n --> OT1/cmss/b/n on input line 345.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/cmss/m/n --> OT1/cmss/b/n on input line 335.
+(Font)                  OT1/cmss/m/n --> OT1/cmss/b/n on input line 345.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/cmss/m/it --> OT1/cmss/b/it on input line 335.
+(Font)                  OT1/cmss/m/it --> OT1/cmss/b/it on input line 345.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/cmtt/m/n --> OT1/cmtt/b/n on input line 335.
-LaTeX Font Info:    Redeclaring symbol font `pureletters' on input line 335.
+(Font)                  OT1/cmtt/m/n --> OT1/cmtt/b/n on input line 345.
+LaTeX Font Info:    Redeclaring symbol font `pureletters' on input line 345.
 LaTeX Font Info:    Overwriting symbol font `pureletters' in version `normal'
-(Font)                  OT1/cmss/m/it --> OT1/mathkerncmss/m/sl on input line 335.
+(Font)                  OT1/cmss/m/it --> OT1/mathkerncmss/m/sl on input line 345.
 LaTeX Font Info:    Overwriting symbol font `pureletters' in version `bold'
-(Font)                  OT1/cmss/b/it --> OT1/mathkerncmss/m/sl on input line 335.
+(Font)                  OT1/cmss/b/it --> OT1/mathkerncmss/m/sl on input line 345.
 LaTeX Font Info:    Overwriting symbol font `pureletters' in version `bold'
-(Font)                  OT1/mathkerncmss/m/sl --> OT1/mathkerncmss/bx/sl on input line 335.
+(Font)                  OT1/mathkerncmss/m/sl --> OT1/mathkerncmss/bx/sl on input line 345.
  (/usr/local/texlive/2021/texmf-dist/tex/latex/translator/translator-basic-dictionary-English.dict
 Dictionary: translator-basic-dictionary, Language: English 
 ) (/usr/local/texlive/2021/texmf-dist/tex/latex/translator/translator-bibliography-dictionary-English.dict
@@ -905,61 +927,61 @@ Dictionary: translator-theorem-dictionary, Language: English
 )
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
- (/Users/temporaryadministrator/Desktop/Mallows_Rank_Model/ImplementBayesMallows/Notes_MallowsRankModel/Seminar_MallowsRankModel.nav)
-LaTeX Font Info:    Trying to load font information for LUC+nanumgt on input line 335.
+ (/Users/changtaeyeong/Desktop/BayesMallowsRankModel/ImplementBayesMallows/Notes_MallowsRankModel/Seminar_MallowsRankModel.nav)
+LaTeX Font Info:    Trying to load font information for LUC+nanumgt on input line 345.
  (/usr/local/texlive/2021/texmf-dist/tex/latex/nanumtype1/lucnanumgt.fd
 File: lucnanumgt.fd 2013/02/12 v0.1 Nanum Gothic font definitions
 ) [1
 
-{/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] (/Users/temporaryadministrator/Desktop/Mallows_Rank_Model/ImplementBayesMallows/Notes_MallowsRankModel/Seminar_MallowsRankModel.toc) [2
+{/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] (/Users/changtaeyeong/Desktop/BayesMallowsRankModel/ImplementBayesMallows/Notes_MallowsRankModel/Seminar_MallowsRankModel.toc
+LaTeX Font Info:    Trying to load font information for U+msa on input line 4.
+ (/usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 4.
+ (/usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+LaTeX Font Info:    Trying to load font information for OT1+mathkerncmss on input line 4.
+ (/usr/local/texlive/2021/texmf-dist/tex/latex/sansmathaccent/ot1mathkerncmss.fd
+File: ot1mathkerncmss.fd 2020/01/31 Fontinst v1.933 font definitions for OT1/mathkerncmss.
+)) [2
 
-] (/Users/temporaryadministrator/Desktop/Mallows_Rank_Model/ImplementBayesMallows/Notes_MallowsRankModel/Seminar_MallowsRankModel.toc) [3
+] (/Users/changtaeyeong/Desktop/BayesMallowsRankModel/ImplementBayesMallows/Notes_MallowsRankModel/Seminar_MallowsRankModel.toc) [3
 
 ] [4
 
 ]
-<./images//sushidata.png, id=175, 709.65125pt x 139.01938pt>
+<./images//sushidata.png, id=228, 709.65125pt x 139.01938pt>
 File: ./images//sushidata.png Graphic file (type png)
 <use ./images//sushidata.png>
-Package pdftex.def Info: ./images//sushidata.png  used on input line 362.
+Package pdftex.def Info: ./images//sushidata.png  used on input line 372.
 (pdftex.def)             Requested size: 284.52756pt x 55.73827pt.
  [5
 
- </Users/temporaryadministrator/Desktop/Mallows_Rank_Model/ImplementBayesMallows/Notes_MallowsRankModel/./images//sushidata.png>] [6
+ </Users/changtaeyeong/Desktop/BayesMallowsRankModel/ImplementBayesMallows/Notes_MallowsRankModel/./images//sushidata.png>] [6
 
-] (/Users/temporaryadministrator/Desktop/Mallows_Rank_Model/ImplementBayesMallows/Notes_MallowsRankModel/Seminar_MallowsRankModel.toc) [7
+] (/Users/changtaeyeong/Desktop/BayesMallowsRankModel/ImplementBayesMallows/Notes_MallowsRankModel/Seminar_MallowsRankModel.toc) [7
 
 ]
-LaTeX Font Info:    Trying to load font information for U+msa on input line 382.
- (/usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/umsa.fd
-File: umsa.fd 2013/01/14 v3.01 AMS symbols A
-)
-LaTeX Font Info:    Trying to load font information for U+msb on input line 382.
- (/usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/umsb.fd
-File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)
-LaTeX Font Info:    Trying to load font information for OT1+mathkerncmss on input line 382.
- (/usr/local/texlive/2021/texmf-dist/tex/latex/sansmathaccent/ot1mathkerncmss.fd
-File: ot1mathkerncmss.fd 2020/01/31 Fontinst v1.933 font definitions for OT1/mathkerncmss.
-)
 LaTeX Font Info:    Font shape `OT1/cmss/b/n' in size <10.95> not available
-(Font)              Font shape `OT1/cmss/bx/n' tried instead on input line 382.
+(Font)              Font shape `OT1/cmss/bx/n' tried instead on input line 392.
 LaTeX Font Info:    Font shape `OT1/cmss/b/n' in size <8> not available
-(Font)              Font shape `OT1/cmss/bx/n' tried instead on input line 382.
+(Font)              Font shape `OT1/cmss/bx/n' tried instead on input line 392.
 LaTeX Font Info:    Font shape `OT1/cmss/b/n' in size <6> not available
-(Font)              Font shape `OT1/cmss/bx/n' tried instead on input line 382.
+(Font)              Font shape `OT1/cmss/bx/n' tried instead on input line 392.
 LaTeX Font Info:    Font shape `OT1/cmss/b/n' in size <10> not available
-(Font)              Font shape `OT1/cmss/bx/n' tried instead on input line 382.
+(Font)              Font shape `OT1/cmss/bx/n' tried instead on input line 392.
 LaTeX Font Info:    Font shape `OT1/cmss/b/n' in size <7> not available
-(Font)              Font shape `OT1/cmss/bx/n' tried instead on input line 382.
+(Font)              Font shape `OT1/cmss/bx/n' tried instead on input line 392.
 LaTeX Font Info:    Font shape `OT1/cmss/b/n' in size <5> not available
-(Font)              Font shape `OT1/cmss/bx/n' tried instead on input line 382.
+(Font)              Font shape `OT1/cmss/bx/n' tried instead on input line 392.
  [8
 
 ] [9
 
 ]
-Overfull \hbox (9.93828pt too wide) detected at line 404
+Overfull \hbox (9.93828pt too wide) detected at line 414
 \OT1/mathkerncmss/m/sl/10.95 P\OT1/cmss/m/n/10.95 (\OT1/cmss/bx/n/10.95 R[]\OML/cmm/m/it/10.95 ; []  ; \OT1/cmss/bx/n/10.95 R[]\OMS/cmsy/m/n/10.95 j\OML/cmm/m/it/10.95 ; []\OT1/cmss/m/n/10.95 ) = \OT1/mathkerncmss/m/sl/10.95 Z[]\OT1/cmss/m/n/10.95 (\OML/cmm/m/it/10.95 ; []\OT1/cmss/m/n/10.95 )[] []\OMS/cmsy/m/n/10.95 f^^@[] [] \OT1/mathkerncmss/m/sl/10.95 d\OT1/cmss/m/n/10.95 (\OT1/cmss/bx/n/10.95 R[]\OML/cmm/m/it/10.95 ; []\OT1/cmss/m/n/10.95 )\OMS/cmsy/m/n/10.95 g [] \OT1/mathkerncmss/m/sl/10.95 I\OT1/cmss/m/n/10.95 (\OT1/cmss/bx/n/10.95 R[] \OMS/cmsy/m/n/10.95 2 P[]\OT1/cmss/m/n/10.95 )
  []
 
@@ -973,63 +995,59 @@ Overfull \hbox (9.93828pt too wide) detected at line 404
 
 ] [14
 
-]
-Overfull \vbox (4.18428pt too high) detected at line 456
- []
-
-[15
+] [15
 
 ] [16
 
-]
-LaTeX Font Info:    Font shape `OT1/cmss/b/n' in size <14.4> not available
-(Font)              Font shape `OT1/cmss/bx/n' tried instead on input line 483.
- [17
+] [17
 
 ]
-LaTeX Font Info:    Font shape `OT1/cmss/b/n' in size <9> not available
-(Font)              Font shape `OT1/cmss/bx/n' tried instead on input line 503.
+LaTeX Font Info:    Font shape `OT1/cmss/b/n' in size <14.4> not available
+(Font)              Font shape `OT1/cmss/bx/n' tried instead on input line 497.
  [18
 
 ]
-<./images//LeapAndShift.png, id=567, 411.03563pt x 180.17313pt>
-File: ./images//LeapAndShift.png Graphic file (type png)
-<use ./images//LeapAndShift.png>
-Package pdftex.def Info: ./images//LeapAndShift.png  used on input line 512.
-(pdftex.def)             Requested size: 411.03462pt x 180.17267pt.
-
-Overfull \hbox (90.63937pt too wide) in paragraph at lines 512--512
- [] 
- []
-
-[19
-
- </Users/temporaryadministrator/Desktop/Mallows_Rank_Model/ImplementBayesMallows/Notes_MallowsRankModel/./images//LeapAndShift.png>]
-<./images//transitionProb.png, id=596, 639.38875pt x 178.6675pt>
-File: ./images//transitionProb.png Graphic file (type png)
-<use ./images//transitionProb.png>
-Package pdftex.def Info: ./images//transitionProb.png  used on input line 521.
-(pdftex.def)             Requested size: 312.9803pt x 87.45787pt.
- [20
-
- </Users/temporaryadministrator/Desktop/Mallows_Rank_Model/ImplementBayesMallows/Notes_MallowsRankModel/./images//transitionProb.png>] [21
+LaTeX Font Info:    Font shape `OT1/cmss/b/n' in size <9> not available
+(Font)              Font shape `OT1/cmss/bx/n' tried instead on input line 517.
+ [19
 
 ]
-<./images//LSproposal1.png, id=653, 421.575pt x 185.69376pt>
-File: ./images//LSproposal1.png Graphic file (type png)
-<use ./images//LSproposal1.png>
-Package pdftex.def Info: ./images//LSproposal1.png  used on input line 548.
-(pdftex.def)             Requested size: 421.57396pt x 185.6933pt.
+<./images//LeapAndShift.png, id=655, 411.03563pt x 180.17313pt>
+File: ./images//LeapAndShift.png Graphic file (type png)
+<use ./images//LeapAndShift.png>
+Package pdftex.def Info: ./images//LeapAndShift.png  used on input line 526.
+(pdftex.def)             Requested size: 411.03462pt x 180.17267pt.
 
-Overfull \hbox (101.17871pt too wide) in paragraph at lines 548--548
+Overfull \hbox (90.63937pt too wide) in paragraph at lines 526--526
  [] 
  []
 
-[22
+[20
 
- </Users/temporaryadministrator/Desktop/Mallows_Rank_Model/ImplementBayesMallows/Notes_MallowsRankModel/./images//LSproposal1.png>] [23
+ </Users/changtaeyeong/Desktop/BayesMallowsRankModel/ImplementBayesMallows/Notes_MallowsRankModel/./images//LeapAndShift.png>]
+<./images//transitionProb.png, id=683, 639.38875pt x 178.6675pt>
+File: ./images//transitionProb.png Graphic file (type png)
+<use ./images//transitionProb.png>
+Package pdftex.def Info: ./images//transitionProb.png  used on input line 535.
+(pdftex.def)             Requested size: 312.9803pt x 87.45787pt.
+ [21
 
-] [24
+ </Users/changtaeyeong/Desktop/BayesMallowsRankModel/ImplementBayesMallows/Notes_MallowsRankModel/./images//transitionProb.png>] [22
+
+]
+<./images//LSproposal1.png, id=740, 421.575pt x 185.69376pt>
+File: ./images//LSproposal1.png Graphic file (type png)
+<use ./images//LSproposal1.png>
+Package pdftex.def Info: ./images//LSproposal1.png  used on input line 562.
+(pdftex.def)             Requested size: 421.57396pt x 185.6933pt.
+
+Overfull \hbox (101.17871pt too wide) in paragraph at lines 562--562
+ [] 
+ []
+
+[23
+
+ </Users/changtaeyeong/Desktop/BayesMallowsRankModel/ImplementBayesMallows/Notes_MallowsRankModel/./images//LSproposal1.png>] [24
 
 ] [25
 
@@ -1037,7 +1055,24 @@ Overfull \hbox (101.17871pt too wide) in paragraph at lines 548--548
 
 ] [27
 
-] [28
+]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 605.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `subscript' on input line 605.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\alpha' on input line 605.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 605.
+
+(/Users/changtaeyeong/Desktop/BayesMallowsRankModel/ImplementBayesMallows/Notes_MallowsRankModel/Seminar_MallowsRankModel.toc) [28
 
 ] [29
 
@@ -1055,33 +1090,137 @@ Overfull \hbox (101.17871pt too wide) in paragraph at lines 548--548
 
 ] [36
 
-] [37
+]
+Overfull \hbox (1.05124pt too wide) detected at line 697
+[]
+ []
+
+[37
 
 ] [38
 
 ] [39
 
-] [40
+]
+<./images//ConDist.png, id=1205, 742.775pt x 303.1325pt>
+File: ./images//ConDist.png Graphic file (type png)
+<use ./images//ConDist.png>
+Package pdftex.def Info: ./images//ConDist.png  used on input line 725.
+(pdftex.def)             Requested size: 284.52756pt x 116.12125pt.
+ [40
 
-] [41
+ </Users/changtaeyeong/Desktop/BayesMallowsRankModel/ImplementBayesMallows/Notes_MallowsRankModel/./images//ConDist.png>] [41
 
 ] [42
 
 ] [43
 
-] [44
+]
+<./images//VitelliFigure3.png, id=1316, 975.645pt x 723.70375pt>
+File: ./images//VitelliFigure3.png Graphic file (type png)
+<use ./images//VitelliFigure3.png>
+Package pdftex.def Info: ./images//VitelliFigure3.png  used on input line 758.
+(pdftex.def)             Requested size: 284.52756pt x 211.0503pt.
+ [44
 
-] [45
+ </Users/changtaeyeong/Desktop/BayesMallowsRankModel/ImplementBayesMallows/Notes_MallowsRankModel/./images//VitelliFigure3.png>] [45
 
 ] [46
 
-] [47
+] (/Users/changtaeyeong/Desktop/BayesMallowsRankModel/ImplementBayesMallows/Notes_MallowsRankModel/Seminar_MallowsRankModel.toc) [47
 
 ] [48
 
+] [49
+
+] [50
+
 ]
-No file Seminar_MallowsRankModel.bbl.
-[49
+Overfull \hbox (12.2895pt too wide) detected at line 822
+\OT1/mathkerncmss/m/sl/10.95 P\OT1/cmss/m/n/10.95 (\OML/cmm/m/it/10.95 ; [] \OMS/cmsy/m/n/10.95 j \OT1/cmss/bx/n/10.95 R[]\OML/cmm/m/it/10.95 ; []  ; \OT1/cmss/bx/n/10.95 R[]\OT1/cmss/m/n/10.95 ) = [] [] [] \OT1/mathkerncmss/m/sl/10.95 P\OT1/cmss/m/n/10.95 (\OML/cmm/m/it/10.95 ; []; []; []  ; [] \OMS/cmsy/m/n/10.95 j \OT1/cmss/bx/n/10.95 R[]\OML/cmm/m/it/10.95 ; []  ; \OT1/cmss/bx/n/10.95 R[]\OT1/cmss/m/n/10.95 )
+ []
+
+[51
+
+] [52
+
+] [53
+
+]
+<./images//Proposition4.png, id=1590, 705.63625pt x 209.78375pt>
+File: ./images//Proposition4.png Graphic file (type png)
+<use ./images//Proposition4.png>
+Package pdftex.def Info: ./images//Proposition4.png  used on input line 855.
+(pdftex.def)             Requested size: 341.43306pt x 101.5081pt.
+<./images//Corollary2.png, id=1591, 705.63625pt x 107.40125pt>
+File: ./images//Corollary2.png Graphic file (type png)
+<use ./images//Corollary2.png>
+Package pdftex.def Info: ./images//Corollary2.png  used on input line 855.
+(pdftex.def)             Requested size: 341.43306pt x 51.96826pt.
+ [54
+
+ </Users/changtaeyeong/Desktop/BayesMallowsRankModel/ImplementBayesMallows/Notes_MallowsRankModel/./images//Proposition4.png> </Users/changtaeyeong/Desktop/BayesMallowsRankModel/ImplementBayesMallows/Notes_MallowsRankModel/./images//Corollary2.png>] [55
+
+] [56
+
+] [57
+
+] [58
+
+] [59
+
+] [60
+
+] [61
+
+] [62
+
+] [63
+
+] [64
+
+] [65
+
+] [66
+
+] [67
+
+] (/Users/changtaeyeong/Desktop/BayesMallowsRankModel/ImplementBayesMallows/Notes_MallowsRankModel/Seminar_MallowsRankModel.toc) [68
+
+] [69
+
+] [70
+
+] [71
+
+]
+File: ./images//sushidata.png Graphic file (type png)
+<use ./images//sushidata.png>
+Package pdftex.def Info: ./images//sushidata.png  used on input line 1036.
+(pdftex.def)             Requested size: 284.52756pt x 55.73827pt.
+ [72
+
+]
+<./images//Rplot_sushi.png, id=2101, 1216.545pt x 658.46pt>
+File: ./images//Rplot_sushi.png Graphic file (type png)
+<use ./images//Rplot_sushi.png>
+Package pdftex.def Info: ./images//Rplot_sushi.png  used on input line 1046.
+(pdftex.def)             Requested size: 284.52756pt x 153.99461pt.
+ [73
+
+ </Users/changtaeyeong/Desktop/BayesMallowsRankModel/ImplementBayesMallows/Notes_MallowsRankModel/./images//Rplot_sushi.png>] [74
+
+]
+<./images//Rplot_beach.png, id=2156, 1216.545pt x 658.46pt>
+File: ./images//Rplot_beach.png Graphic file (type png)
+<use ./images//Rplot_beach.png>
+Package pdftex.def Info: ./images//Rplot_beach.png  used on input line 1065.
+(pdftex.def)             Requested size: 312.9803pt x 169.3971pt.
+ [75
+
+ </Users/changtaeyeong/Desktop/BayesMallowsRankModel/ImplementBayesMallows/Notes_MallowsRankModel/./images//Rplot_beach.png>] [76
+
+] (/Users/changtaeyeong/Desktop/BayesMallowsRankModel/ImplementBayesMallows/Notes_MallowsRankModel/Seminar_MallowsRankModel.bbl) [77
 
 ]
 \tf@nav=\write6
@@ -1093,23 +1232,23 @@ No file Seminar_MallowsRankModel.bbl.
 \tf@snm=\write8
 \openout8 = `Seminar_MallowsRankModel.snm'.
 
- (/Users/temporaryadministrator/Desktop/Mallows_Rank_Model/ImplementBayesMallows/Notes_MallowsRankModel/Seminar_MallowsRankModel.aux)
+ (/Users/changtaeyeong/Desktop/BayesMallowsRankModel/ImplementBayesMallows/Notes_MallowsRankModel/Seminar_MallowsRankModel.aux)
 Package rerunfilecheck Info: File `Seminar_MallowsRankModel.out' has not changed.
-(rerunfilecheck)             Checksum: FB6C0EC55D893A8A6210EDFA7763046C;384.
+(rerunfilecheck)             Checksum: 333E82D54984B0B1600F05D3B370EFEA;2183.
  ) 
 Here is how much of TeX's memory you used:
- 24108 strings out of 478994
- 444208 string characters out of 5858184
- 732002 words of memory out of 5000000
- 40908 multiletter control sequences out of 15000+600000
+ 25054 strings out of 478994
+ 458787 string characters out of 5858184
+ 761650 words of memory out of 5000000
+ 41758 multiletter control sequences out of 15000+600000
  438557 words of font info for 137 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 131i,16n,132p,667b,792s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex9.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib8.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib9.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmss9.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi8.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi9.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/nanumtype1/nanumgtmac.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/nanumtype1/nanumgtmad.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/nanumtype1/nanumgtmb2.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/nanumtype1/nanumgtmb3.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/nanumtype1/nanumgtmbb.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/nanumtype1/nanumgtmbc.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/nanumtype1/nanumgtmc1.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/nanumtype1/nanumgtmc2.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/nanumtype1/nanumgtmc5.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/nanumtype1/nanumgtmc6.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/nanumtype1/nanumgtmc7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/nanumtype1/nanumgtmc8.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/nanumtype1/nanumgtmc9.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/nanumtype1/nanumgtmd0.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/nanumtype1/nanumgtmd1.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/nanumtype1/nanumgtmd5.pfb>
-Output written on /Users/temporaryadministrator/Desktop/Mallows_Rank_Model/ImplementBayesMallows/Notes_MallowsRankModel/Seminar_MallowsRankModel.pdf (49 pages, 772625 bytes).
+ 131i,16n,132p,695b,791s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex9.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib8.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib9.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmss9.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi12.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi8.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi9.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/nanumtype1/nanumgtmac.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/nanumtype1/nanumgtmad.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/nanumtype1/nanumgtmb2.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/nanumtype1/nanumgtmb3.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/nanumtype1/nanumgtmbb.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/nanumtype1/nanumgtmbc.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/nanumtype1/nanumgtmc1.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/nanumtype1/nanumgtmc2.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/nanumtype1/nanumgtmc5.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/nanumtype1/nanumgtmc6.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/nanumtype1/nanumgtmc7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/nanumtype1/nanumgtmc8.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/nanumtype1/nanumgtmc9.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/nanumtype1/nanumgtmd0.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/nanumtype1/nanumgtmd1.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/nanumtype1/nanumgtmd5.pfb>
+Output written on /Users/changtaeyeong/Desktop/BayesMallowsRankModel/ImplementBayesMallows/Notes_MallowsRankModel/Seminar_MallowsRankModel.pdf (77 pages, 1488612 bytes).
 PDF statistics:
- 1546 PDF objects out of 1728 (max. 8388607)
- 1414 compressed objects within 15 object streams
- 101 named destinations out of 1000 (max. 500000)
- 139 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 2412 PDF objects out of 2487 (max. 8388607)
+ 2228 compressed objects within 23 object streams
+ 167 named destinations out of 1000 (max. 500000)
+ 231 words of extra memory for PDF output out of 10000 (max. 10000000)
 
