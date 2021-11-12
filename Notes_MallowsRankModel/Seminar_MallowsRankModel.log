@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.8.12)  9 NOV 2021 00:52
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.8.12)  12 NOV 2021 13:07
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1115,53 +1115,53 @@ Package pdftex.def Info: ./images//ConDist.png  used on input line 725.
 
 ] [43
 
+] [44
+
 ]
-<./images//VitelliFigure3.png, id=1316, 975.645pt x 723.70375pt>
+<./images//VitelliFigure3.png, id=1343, 975.645pt x 723.70375pt>
 File: ./images//VitelliFigure3.png Graphic file (type png)
 <use ./images//VitelliFigure3.png>
-Package pdftex.def Info: ./images//VitelliFigure3.png  used on input line 758.
+Package pdftex.def Info: ./images//VitelliFigure3.png  used on input line 765.
 (pdftex.def)             Requested size: 284.52756pt x 211.0503pt.
- [44
+ [45
 
- </Users/changtaeyeong/Desktop/BayesMallowsRankModel/ImplementBayesMallows/Notes_MallowsRankModel/./images//VitelliFigure3.png>] [45
+ </Users/changtaeyeong/Desktop/BayesMallowsRankModel/ImplementBayesMallows/Notes_MallowsRankModel/./images//VitelliFigure3.png>] [46
 
-] [46
+] [47
 
-] (/Users/changtaeyeong/Desktop/BayesMallowsRankModel/ImplementBayesMallows/Notes_MallowsRankModel/Seminar_MallowsRankModel.toc) [47
-
-] [48
+] (/Users/changtaeyeong/Desktop/BayesMallowsRankModel/ImplementBayesMallows/Notes_MallowsRankModel/Seminar_MallowsRankModel.toc) [48
 
 ] [49
 
 ] [50
 
+] [51
+
 ]
-Overfull \hbox (12.2895pt too wide) detected at line 822
+Overfull \hbox (12.2895pt too wide) detected at line 829
 \OT1/mathkerncmss/m/sl/10.95 P\OT1/cmss/m/n/10.95 (\OML/cmm/m/it/10.95 ; [] \OMS/cmsy/m/n/10.95 j \OT1/cmss/bx/n/10.95 R[]\OML/cmm/m/it/10.95 ; []  ; \OT1/cmss/bx/n/10.95 R[]\OT1/cmss/m/n/10.95 ) = [] [] [] \OT1/mathkerncmss/m/sl/10.95 P\OT1/cmss/m/n/10.95 (\OML/cmm/m/it/10.95 ; []; []; []  ; [] \OMS/cmsy/m/n/10.95 j \OT1/cmss/bx/n/10.95 R[]\OML/cmm/m/it/10.95 ; []  ; \OT1/cmss/bx/n/10.95 R[]\OT1/cmss/m/n/10.95 )
  []
 
-[51
-
-] [52
+[52
 
 ] [53
 
+] [54
+
 ]
-<./images//Proposition4.png, id=1590, 705.63625pt x 209.78375pt>
+<./images//Proposition4.png, id=1617, 705.63625pt x 209.78375pt>
 File: ./images//Proposition4.png Graphic file (type png)
 <use ./images//Proposition4.png>
-Package pdftex.def Info: ./images//Proposition4.png  used on input line 855.
+Package pdftex.def Info: ./images//Proposition4.png  used on input line 862.
 (pdftex.def)             Requested size: 341.43306pt x 101.5081pt.
-<./images//Corollary2.png, id=1591, 705.63625pt x 107.40125pt>
+<./images//Corollary2.png, id=1618, 705.63625pt x 107.40125pt>
 File: ./images//Corollary2.png Graphic file (type png)
 <use ./images//Corollary2.png>
-Package pdftex.def Info: ./images//Corollary2.png  used on input line 855.
+Package pdftex.def Info: ./images//Corollary2.png  used on input line 862.
 (pdftex.def)             Requested size: 341.43306pt x 51.96826pt.
- [54
+ [55
 
- </Users/changtaeyeong/Desktop/BayesMallowsRankModel/ImplementBayesMallows/Notes_MallowsRankModel/./images//Proposition4.png> </Users/changtaeyeong/Desktop/BayesMallowsRankModel/ImplementBayesMallows/Notes_MallowsRankModel/./images//Corollary2.png>] [55
-
-] [56
+ </Users/changtaeyeong/Desktop/BayesMallowsRankModel/ImplementBayesMallows/Notes_MallowsRankModel/./images//Proposition4.png> </Users/changtaeyeong/Desktop/BayesMallowsRankModel/ImplementBayesMallows/Notes_MallowsRankModel/./images//Corollary2.png>] [56
 
 ] [57
 
@@ -1185,42 +1185,44 @@ Package pdftex.def Info: ./images//Corollary2.png  used on input line 855.
 
 ] [67
 
-] (/Users/changtaeyeong/Desktop/BayesMallowsRankModel/ImplementBayesMallows/Notes_MallowsRankModel/Seminar_MallowsRankModel.toc) [68
+] [68
 
-] [69
+] (/Users/changtaeyeong/Desktop/BayesMallowsRankModel/ImplementBayesMallows/Notes_MallowsRankModel/Seminar_MallowsRankModel.toc) [69
 
 ] [70
 
 ] [71
 
+] [72
+
 ]
 File: ./images//sushidata.png Graphic file (type png)
 <use ./images//sushidata.png>
-Package pdftex.def Info: ./images//sushidata.png  used on input line 1036.
+Package pdftex.def Info: ./images//sushidata.png  used on input line 1043.
 (pdftex.def)             Requested size: 284.52756pt x 55.73827pt.
- [72
-
-]
-<./images//Rplot_sushi.png, id=2101, 1216.545pt x 658.46pt>
-File: ./images//Rplot_sushi.png Graphic file (type png)
-<use ./images//Rplot_sushi.png>
-Package pdftex.def Info: ./images//Rplot_sushi.png  used on input line 1046.
-(pdftex.def)             Requested size: 284.52756pt x 153.99461pt.
  [73
 
- </Users/changtaeyeong/Desktop/BayesMallowsRankModel/ImplementBayesMallows/Notes_MallowsRankModel/./images//Rplot_sushi.png>] [74
+]
+<./images//Rplot_sushi.png, id=2129, 1216.545pt x 658.46pt>
+File: ./images//Rplot_sushi.png Graphic file (type png)
+<use ./images//Rplot_sushi.png>
+Package pdftex.def Info: ./images//Rplot_sushi.png  used on input line 1053.
+(pdftex.def)             Requested size: 284.52756pt x 153.99461pt.
+ [74
+
+ </Users/changtaeyeong/Desktop/BayesMallowsRankModel/ImplementBayesMallows/Notes_MallowsRankModel/./images//Rplot_sushi.png>] [75
 
 ]
-<./images//Rplot_beach.png, id=2156, 1216.545pt x 658.46pt>
+<./images//Rplot_beach.png, id=2183, 1216.545pt x 658.46pt>
 File: ./images//Rplot_beach.png Graphic file (type png)
 <use ./images//Rplot_beach.png>
-Package pdftex.def Info: ./images//Rplot_beach.png  used on input line 1065.
+Package pdftex.def Info: ./images//Rplot_beach.png  used on input line 1072.
 (pdftex.def)             Requested size: 312.9803pt x 169.3971pt.
- [75
+ [76
 
- </Users/changtaeyeong/Desktop/BayesMallowsRankModel/ImplementBayesMallows/Notes_MallowsRankModel/./images//Rplot_beach.png>] [76
+ </Users/changtaeyeong/Desktop/BayesMallowsRankModel/ImplementBayesMallows/Notes_MallowsRankModel/./images//Rplot_beach.png>] [77
 
-] (/Users/changtaeyeong/Desktop/BayesMallowsRankModel/ImplementBayesMallows/Notes_MallowsRankModel/Seminar_MallowsRankModel.bbl) [77
+] (/Users/changtaeyeong/Desktop/BayesMallowsRankModel/ImplementBayesMallows/Notes_MallowsRankModel/Seminar_MallowsRankModel.bbl) [78
 
 ]
 \tf@nav=\write6
@@ -1234,21 +1236,21 @@ Package pdftex.def Info: ./images//Rplot_beach.png  used on input line 1065.
 
  (/Users/changtaeyeong/Desktop/BayesMallowsRankModel/ImplementBayesMallows/Notes_MallowsRankModel/Seminar_MallowsRankModel.aux)
 Package rerunfilecheck Info: File `Seminar_MallowsRankModel.out' has not changed.
-(rerunfilecheck)             Checksum: 333E82D54984B0B1600F05D3B370EFEA;2183.
+(rerunfilecheck)             Checksum: 66947614C00B3F1F14467CAC2224D11C;2183.
  ) 
 Here is how much of TeX's memory you used:
- 25054 strings out of 478994
- 458787 string characters out of 5858184
- 761650 words of memory out of 5000000
- 41758 multiletter control sequences out of 15000+600000
+ 25058 strings out of 478994
+ 458824 string characters out of 5858184
+ 761651 words of memory out of 5000000
+ 41760 multiletter control sequences out of 15000+600000
  438557 words of font info for 137 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  131i,16n,132p,695b,791s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex9.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib8.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib9.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmss9.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi12.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi8.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi9.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/nanumtype1/nanumgtmac.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/nanumtype1/nanumgtmad.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/nanumtype1/nanumgtmb2.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/nanumtype1/nanumgtmb3.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/nanumtype1/nanumgtmbb.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/nanumtype1/nanumgtmbc.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/nanumtype1/nanumgtmc1.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/nanumtype1/nanumgtmc2.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/nanumtype1/nanumgtmc5.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/nanumtype1/nanumgtmc6.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/nanumtype1/nanumgtmc7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/nanumtype1/nanumgtmc8.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/nanumtype1/nanumgtmc9.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/nanumtype1/nanumgtmd0.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/nanumtype1/nanumgtmd1.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/nanumtype1/nanumgtmd5.pfb>
-Output written on /Users/changtaeyeong/Desktop/BayesMallowsRankModel/ImplementBayesMallows/Notes_MallowsRankModel/Seminar_MallowsRankModel.pdf (77 pages, 1488612 bytes).
+Output written on /Users/changtaeyeong/Desktop/BayesMallowsRankModel/ImplementBayesMallows/Notes_MallowsRankModel/Seminar_MallowsRankModel.pdf (78 pages, 1490736 bytes).
 PDF statistics:
- 2412 PDF objects out of 2487 (max. 8388607)
- 2228 compressed objects within 23 object streams
- 167 named destinations out of 1000 (max. 500000)
+ 2440 PDF objects out of 2487 (max. 8388607)
+ 2255 compressed objects within 23 object streams
+ 169 named destinations out of 1000 (max. 500000)
  231 words of extra memory for PDF output out of 10000 (max. 10000000)
 

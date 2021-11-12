@@ -645,7 +645,7 @@ Bayesian Mallows Model for Rank Data}
 
 \begin{frame}{Off-line approximation}
 \begin{itemize}
-    \item Obtain an off-line approximation of the partition function on a gird of $\alpha$ values. 
+    \item Obtain an off-line approximation of the partition function on a grid of $\alpha$ values. 
     \begin{itemize}
         \item In computer science, an online algorithm is one that can process its input piece-by-piece in a serial fashion, i.e. in the order that the input is fed to the algorithm, without having the entire input available from the start.
         \item In contrast, an offline algorithm is given the whole problem data from the beginning and is required to output an answer which solves the problem at hand. \\ (Source : Wikipedia \href{https://en.wikipedia.org/wiki/Online_algorithm}{Online Algorithm})
@@ -751,6 +751,13 @@ Bayesian Mallows Model for Rank Data}
 \end{itemize}
 \end{frame}
 
+\begin{frame}{Effect of approximation on the MCMC}
+    \begin{itemize}
+        \item The approximate posterior above converges to the exact posterior \eqref{posterior}, if $K=K(N)$ increases with $N$ and $$\lim_{N \to \infty}(\frac{\hat{Z}_n^{K(N)}(\alpha)}{Z_n(\alpha)})^N =1 \quad \forall \; \alpha$$
+        \item For this, it is sufficient that $K(N)$ grows faster than $c\cdot N^2$ where $c$ depends on $\alpha, n, d( \;,\; )$ 
+    \end{itemize}
+    \end{frame}
+
 \begin{frame}{Studying the effect of approximation by simulations}
     \begin{figure}
         \includegraphics[width=10cm]{VitelliFigure3.png}
@@ -807,7 +814,7 @@ Bayesian Mallows Model for Rank Data}
 
 \begin{frame}{MCMC Algorithms for top-$k$ ranks case}
 \begin{itemize}
-    \item $\mathcal{S}_j$ : set of all possible augmented random vectors given original partially ranked items together with the allowable `fill-ins' of the missing ranks, for each $j=1, \cdots, N$
+    \item $\mathcal{S}_j$ : set of all possible augmented ranking vectors given original partially ranked items together with the allowable `fill-ins' of the missing ranks, for each $j=1, \cdots, N$
     \item Our goal is to sample from the posterior distribution 
     \begin{equation*}
         P(\alpha, \boldsymbol{\rho}\, |\, \mathbf{R}_1, \cdots, \mathbf{R}_N)=\sum_{\tilde{\mathbf{R}}_1\in \mathcal{S}_1}\cdots \sum_{\tilde{\mathbf{R}}_N\in \mathcal{S}_N}P(\alpha, \boldsymbol{\rho}, \tilde{\mathbf{R}}_1, \cdots,\tilde{\mathbf{R}}_N\, |\, \mathbf{R}_1, \cdots, \mathbf{R}_N )
@@ -817,7 +824,7 @@ Bayesian Mallows Model for Rank Data}
         \item  sampling the augmented ranks given the current values of $\alpha$ and $\boldsymbol{\rho}$
         \item sampling $\alpha$ and $\boldsymbol{\rho}$ given the current values of the augmented ranks.
     \end{enumerate}
-    \item The latter is done similar as in Section 2.4, where in this case $\mathbf{R}_1, \cdots, \mathbf{R}_N$ is replaced by $\tilde{\mathbf{R}}_1, \cdots,\tilde{\mathbf{R}}_N$ 
+    \item The latter is done similar as in Section 2, where in this case $\mathbf{R}_1, \cdots, \mathbf{R}_N$ is replaced by $\tilde{\mathbf{R}}_1, \cdots,\tilde{\mathbf{R}}_N$ 
 \end{itemize}
 \end{frame}
 
@@ -867,7 +874,7 @@ Bayesian Mallows Model for Rank Data}
     \item Often, assessors compare pairs of items rather than ranking all or a subset of items. 
     \item Notation for pairwise comparison 
     \begin{itemize}
-        \item $A_r\prec A_s$ : $A_s$ is preferred to $A_r$, so that $A_s$ has a lower rank than $A_r$ 
+        \item $A_r\prec A_s$ : $A_s$ is preferred to $A_r$, so that $A_s$ has a higher rank than $A_r$ 
         \item $\mathcal{B}_j$ : pairwise orderings or preferences stated by assessor $j$
         \item $\mathcal{A}_j$ : set of items constrained by asessor $j$
         \item $tc(\mathcal{B}_j)$ : the transitive closure of $\mathcal{B}_j$, containing all pairwise orderings of the elements in $\mathcal{A}_j$ induced by $\mathcal{B}_j$.
@@ -1075,6 +1082,7 @@ Bayesian Mallows Model for Rank Data}
 
 
 %\subsection<presentation>*{For Further Reading}
+
 \begin{frame}{Reference}
     \nocite{vitelli2017probabilistic}
     \bibliography{vitelli2017probabilistic}
