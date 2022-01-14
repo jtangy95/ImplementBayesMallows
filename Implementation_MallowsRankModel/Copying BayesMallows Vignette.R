@@ -131,7 +131,52 @@ compute_consensus(bmm_sushi) %>%
   spread(key=cluster, value=item)
 
 
+## From estimate_partition_function_example.R file
+## Importance sampling strategy for approximating partition function
+alpha_vector <- seq(from = 0, to = 10, by = 0.5)
+n_items <- 20
+metric <- "spearman"
+degree <- 10
 
+# We start with 1e3 Monte Carlo samples
+fit <- estimate_partition_function(method = "importance_sampling",
+                                    alpha_vector = alpha_vector,
+                                    n_items = n_items, metric = metric,
+                                    nmc = 1e+4, degree = degree)
+# A vector of polynomial regression coefficients is returned
+fit
+
+
+# We write a little function for storing the estimates in a dataframe
+library(dplyr)
+powers <- seq(from = 0, to = degree, by = 1)
+
+compute_fit <- function(fit){
+  tibble(alpha = alpha_vector) %>%
+    rowwise() %>%
+    mutate(logz_estimate = sum(alpha^powers * fit))
+}
+
+estimates <- compute_fit(fit)
+
+
+# We can now plot the two estimates side-by-side
+library(ggplot2)
+ggplot(estimates, aes(x = alpha, y = logz_estimate)) +
+  geom_line()
+# We see that the two importance sampling estimates, which are unbiased,
+# overlap. The asymptotic approximation seems a bit off. It can be worthwhile
+# to try different values of n_iterations and K.
+
+# When we are happy, we can provide the coefficient vector in the
+# logz_estimate argument to compute_mallows
+# Say we choose to use the importance sampling estimate with 1e4 Monte Carlo samples:
+bmm_potato_is <- compute_mallows(potato_visual, metric = "spearman",
+                             logz_estimate = fit, nmc = 501000, verbose = T)
+
+bmm_potato_is$burnin <- 1000
+plot(bmm_potato_is, parameter = 'rho', items = 1:20)
+plot(bmm_potato_is, parameter = 'alpha')
 
 
 
