@@ -57,13 +57,13 @@ void leap_and_shift(arma::vec& rho_proposal, arma::uvec& indices,
   double length1 = std::min(rho_current(u - 1) - 1, dobL);
   double length2 = std::min(n - rho_current(u - 1), dobL);
 
-  if((rho(u - 1) > 1) & (rho(u - 1) < n)){
+  if((rho_current(u - 1) > 1) & (rho_current(u - 1) < n)){
     support = arma::join_cols(arma::linspace(
       std::max(1.0, rho_current(u - 1) - leap_size), rho_current(u - 1) - 1, length1) ,
       arma::linspace(rho_current(u - 1) + 1, std::min(dobn, rho_current(u - 1) + leap_size), length2));
       // Note : `join_cols(A,B)` performs a vertical concatenation
   } else if(rho_current(u - 1) == 1){
-    support = arma::linspace(rho(u - 1) + 1, std::min(dobn, rho_current(u - 1) + leap_size), length2);
+    support = arma::linspace(rho_current(u - 1) + 1, std::min(dobn, rho_current(u - 1) + leap_size), length2);
   } else if(rho_current(u - 1) == n){
     support = arma::linspace(std::max(1.0, rho_current(u - 1) - leap_size), rho_current(u - 1) - 1, length1);
   }
@@ -76,7 +76,7 @@ void leap_and_shift(arma::vec& rho_proposal, arma::uvec& indices,
   // Note : Now "rho_proposal" becomes rho_star in the paper.
 
   // Compute the associated transition probabilities
-  if(std::abs(rho_proposal(u - 1) - rho(u - 1)) == 1){
+  if(std::abs(rho_proposal(u - 1) - rho_current(u - 1)) == 1){
     // in this case the transition probabilities coincide! (and in fact for leap_size = 1 the L&S is symmetric)
     support_new_len = std::min(rho_proposal(u - 1) - 1, dobL) + std::min(n - rho_proposal(u - 1), dobL);
     // Note : This is similar to length1+length2 for S above

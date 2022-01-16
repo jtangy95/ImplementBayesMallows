@@ -1,4 +1,6 @@
 #include <RcppArmadillo.h>
+#include "my_distances.h"
+#include "my_leap_and_shift.h"
 
 // [[Rcpp::depends(RcppArmadillo)]]
 // [[Rcpp::export]]
@@ -17,7 +19,7 @@ void update_rho(arma::mat& rho, int& rho_acceptance, arma::vec& rho_current,
   // Note : then we get new "rho_proposal". Also, "indices" is the index where rho_old and rho_proposal are different. "prob_backward" and "prob_forward" are probabilities associated to the transition.
 
   // Compute the distances to current and proposed ranks
-  double dist_new = rank_dist_sum(rankings.rows(indices) rho_proposal(indices), metric);
+  double dist_new = rank_dist_sum(rankings.rows(indices), rho_proposal(indices), metric);
   double dist_old = rank_dist_sum(rankings.rows(indices), rho_current(indices), metric);
   // ! `rank_dist_sum` is defined in distances.cpp
   // `X.rows( vector_of_row_indices)` is a way of subsetting matrix
