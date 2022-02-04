@@ -4,7 +4,7 @@ library('BayesMallows')
 data("potato_visual")
 potato_visual
 
-sourceCpp('/Users/temporaryadministrator/Desktop/Mallows_Rank_Model/ImplementBayesMallows/Implementation_MallowsRankModel/my_distances.cpp')
+sourceCpp('/Users/changtaeyeong/Desktop/BayesMallowsRankModel/ImplementBayesMallows/Implementation_MallowsRankModel/my_distances.cpp')
 
 n=20
 R1 = sample(1:n, n)
@@ -21,7 +21,7 @@ cbind(rho_ref, t(potato_visual))
 rank_dist_vec(t(potato_visual), rho_ref, metric)
 rank_dist_sum(t(potato_visual), rho_ref, metric)
 
-sourceCpp('/Users/temporaryadministrator/Desktop/Mallows_Rank_Model/ImplementBayesMallows/Implementation_MallowsRankModel/my_leap_and_shift.cpp')
+sourceCpp('/Users/changtaeyeong/Desktop/BayesMallowsRankModel/ImplementBayesMallows/Implementation_MallowsRankModel/my_leap_and_shift.cpp')
 
-sourceCpp('/Users/temporaryadministrator/Desktop/Mallows_Rank_Model/ImplementBayesMallows/Implementation_MallowsRankModel/my_parameter_updates.cpp')
+sourceCpp('/Users/changtaeyeong/Desktop/BayesMallowsRankModel/ImplementBayesMallows/Implementation_MallowsRankModel/my_parameter_updates.cpp')
 

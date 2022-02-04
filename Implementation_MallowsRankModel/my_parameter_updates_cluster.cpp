@@ -5,9 +5,12 @@
 
 // [[Rcpp::depends(RcppArmadillo)]]
 // [[Rcpp::export]]
-void update_rho(arma::mat& rho, int& rho_acceptance, arma::vec& rho_current,
-                int& rho_index,  const int& rho_thinning,
-                const double& alpha_current, const int& leap_size, const arma::mat& rankings, const std::string& metric, const int& n_items, const int& t) {
+void update_rho(arma::cube& rho, arma::uvec& rho_acceptance, arma::mat& rho_current,
+                int& rho_index,  const int& cluster_index , const int& rho_thinning,
+                const double& alpha_current, const int& leap_size, const arma::mat& rankings, const std::string& metric, 
+                const int& n_items, const int& t) {
+  
+  arma::vec rho_cluster = rho_current.col(cluster_index) ;
 
   // Sample a rank proposal
   arma::vec rho_proposal;
@@ -15,13 +18,13 @@ void update_rho(arma::mat& rho, int& rho_acceptance, arma::vec& rho_current,
   double prob_backward, prob_forward;
 
   leap_and_shift(rho_proposal, indices, prob_backward, prob_forward,
-                 rho_current, leap_size);
+                 rho_cluster, leap_size);
   // ! `leap_and_shift` is defined in leapandshift.cpp
   // Note : then we get new "rho_proposal". Also, "indices" is the index where rho_old and rho_proposal are different. "prob_backward" and "prob_forward" are probabilities associated to the transition.
 
   // Compute the distances to current and proposed ranks
   double dist_new = rank_dist_sum(rankings.rows(indices), rho_proposal(indices), metric);
-  double dist_old = rank_dist_sum(rankings.rows(indices), rho_current(indices), metric);
+  double dist_old = rank_dist_sum(rankings.rows(indices), rho_cluster(indices), metric);
   // ! `rank_dist_sum` is defined in distances.cpp
   // `X.rows( vector_of_row_indices)` is a way of subsetting matrix
   // "dist_new" yields sum_{j=1}^N d(R_j, rho_proposal), where distance is caculated only on the indices where rho_proposal and rho_old are different.
@@ -35,23 +38,26 @@ void update_rho(arma::mat& rho, int& rho_acceptance, arma::vec& rho_current,
   double u = std::log(arma::randu<double>());
 
   if(u < ratio){
-    rho_current = rho_proposal ;
-    ++rho_acceptance ;
+    rho_current.col(cluster_index) = rho_proposal ;
+    ++rho_acceptance(cluster_index) ;
     // Note : At first, rho_current was initially given. Now, rho_current has changed. 
     // Note : rho_accpetance holds the number of acceptance. Here, increment it by one.
   }
 
   // Save rho if appropriate
   if(t % rho_thinning == 0){
-    ++rho_index;
-    rho.col(rho_index) = rho_current ;
+    if(cluster_index ==0) {
+        ++rho_index;
+    }
+    rho.slice(rho_index).col(cluster_index) = rho_current.col(cluster_index) ;
   }
 
 }
 
-double update_alpha(int& alpha_acceptance,
+double update_alpha(arma::uvec& alpha_acceptance,
                   const double& alpha_current,
                   const arma::mat& rankings,
+                  const int& cluster_index, 
                   const arma::vec& rho_current,
                   const double& alpha_prop_sd,
                   const std::string& metric,
@@ -61,9 +67,8 @@ double update_alpha(int& alpha_acceptance,
                   double alpha_max = 1e6) {
   // Note : R_NilValue is equivalent to NULL value in R.
 
-  // Set the number of assessors. Not using the variable from run_mcmc because
-  // here we want the number of assessors in this cluster
-  //int n_assessors = rankings.n_cols; (This was the code for the number of assessors in run_mcmc)
+  // Set the number of assessors. Here we want the number of assessors in this cluster
+  
   int n_items = rho_current.n_elem;
   int n_assessors = rankings.n_cols;
 
@@ -92,7 +97,7 @@ double update_alpha(int& alpha_acceptance,
   double u = std::log(arma::randu<double>());
 
   if(ratio > u && alpha_proposal < alpha_max){
-    ++alpha_acceptance ;
+    ++alpha_acceptance(cluster_index) ;
     return alpha_proposal;
   } else {
     return alpha_current;
