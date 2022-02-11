@@ -29,9 +29,9 @@ compute_consensus <- function(model_fit, type = "CP", burnin = model_fit$burnin,
     stopifnot(model_fit$n_items == n_rows)
     
     df <- if(type == "CP"){
-      .compute_cp_consensus(df)
+      .compute_cp_consensus_cluster(df)
     } else if(type == "MAP"){
-      .compute_map_consensus(df)
+      .compute_map_consensus_cluster(df)
     }
     
     

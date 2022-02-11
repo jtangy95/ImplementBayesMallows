@@ -1,13 +1,32 @@
 library(Rcpp)
 library(RcppArmadillo)
 
-validate_permutation <- function(vec){
-  return(all(sort(vec) == seq_along(vec)))
+# validate_permutation prepared also for incomplete ranking
+validate_permutation_na <- function(vec){
+  if(!any(is.na(vec))){
+    # complete ranking
+    return(all(sort(vec) == seq_along(vec)))
+  } else if(all(is.na(vec))){
+    # totally missing rank
+    return(TRUE)
+  } else {
+    # partial ranking
+    return(all(vec[!is.na(vec)] <= length(vec)) &&
+             all(vec[!is.na(vec)] >= 1) && !any(duplicated(vec[!is.na(vec)])))
+  }
 }
 
-sourceCpp('/Users/changtaeyeong/Desktop/BayesMallowsRankModel/ImplementBayesMallows/Implementation_MallowsRankModel/my_run_mcmc_cluster.cpp')
+source("/Users/changtaeyeong/Desktop/BayesMallowsRankModel/ImplementBayesMallows/Implementation_MallowsRankModel/my_partition_function.R")
+source("/Users/changtaeyeong/Desktop/BayesMallowsRankModel/ImplementBayesMallows/Implementation_MallowsRankModel/my_tidy_mcmc_combined.R")
+source("/Users/changtaeyeong//Desktop/BayesMallowsRankModel/BayesMallows/R/generate_transitive_closure.R")
+source("/Users/changtaeyeong//Desktop/BayesMallowsRankModel/BayesMallows/R/generate_initial_ranking.R")
+source("/Users/changtaeyeong//Desktop/BayesMallowsRankModel/BayesMallows/R/generate_constraints.R")
+source("/Users/changtaeyeong//Desktop/BayesMallowsRankModel/BayesMallows/R/rank_conversion.R")
 
-compute_mallows_cluster <- function(rankings ,
+sourceCpp('/Users/changtaeyeong/Desktop/BayesMallowsRankModel/ImplementBayesMallows/Implementation_MallowsRankModel/my_run_mcmc_combined.cpp')
+
+compute_mallows <- function(rankings = NULL ,
+                            preferences = NULL, 
                             metric = "footrule",
                             nmc = 10000L,
                             leap_size = max(1L, floor(ncol(rankings) / 5)),
@@ -21,20 +40,23 @@ compute_mallows_cluster <- function(rankings ,
                             logz_estimate = NULL,
                             importance_sampling = FALSE,
                             is_nmc = 10000L,
-                            verbose = FALSE,
                             n_clusters = 1L,
                             clus_thin = 1L,
                             psi = 10,
                             include_wcd = (n_clusters >1),
+                            aug_thinning = 1L,
+                            save_aug = FALSE,
+                            constraints = NULL, 
                             validate_rankings = TRUE,
-                            seed = NULL
+                            seed = NULL,
+                            verbose = FALSE
 ){
   
   if(!is.null(seed)) set.seed(seed)
   
   # Check that at most one of rankings and preferences is set
-  if(is.null(rankings)){
-    stop("Rankings must be provided.")
+  if(is.null(rankings) & is.null(preferences)){
+    stop("At least one of rankings or preferences must be provided.")
   }
   
   if(nmc <= 0) stop("nmc must be strictly positive")
@@ -44,18 +66,42 @@ compute_mallows_cluster <- function(rankings ,
   
   # Check that we do not jump over all rhos
   if(rho_thinning >= nmc) stop("rho_thinning must be strictly smaller than nmc")
+  if(aug_thinning >= nmc) stop("aug_thinning must be strictly smaller than nmc")
+  if(clus_thin >= nmc) stop("clus_thin must be strictly smaller than nmc")
   
   if(lambda <= 0) stop("exponential rate parameter lambda must be strictly positive")
   
   # Check that all rows of rankings are proper permutations
-  if(!is.null(rankings) && validate_rankings && !all(apply(rankings, 1, validate_permutation))){
+  if(!is.null(rankings) && validate_rankings && !all(apply(rankings, 1, validate_permutation_na))){
     stop("invalid permutations provided in rankings matrix")
+  }
+  
+  # Deal with pairwise comparisons. Generate rankings compatible with them.
+  if(!is.null(preferences)){
+    
+    if(!inherits(preferences, "BayesMallowsTC")){
+      message("Generating transitive closure of preferences.")
+      # Make sure the preference columns are double
+      preferences <- dplyr::mutate(preferences, bottom_item = as.numeric(bottom_item),
+                                   top_item = as.numeric(top_item))
+      preferences <- generate_transitive_closure(preferences)
+    }
+    if(is.null(rankings)){
+      message("Generating initial ranking.")
+      rankings <- generate_initial_ranking(preferences)
+    }
   }
   
   # Find the number of items
   n_items <- ncol(rankings)
   
-  
+  # Generate the constraint set
+  if(!is.null(preferences) && is.null(constraints)){
+    constraints <- generate_constraints(preferences, n_items)
+  } else if (is.null(constraints)){
+    constraints <- list()
+  }
+
   if(!is.null(rho_init)) {
     if(!validate_permutation(rho_init)) stop("rho_init must be a proper permutation")
     if(any(is.na(rho_init))) stop("rho_init cannot have missing values")
@@ -73,7 +119,8 @@ compute_mallows_cluster <- function(rankings ,
   
   # Transpose rankings to get samples along columns, since we typically want
   # to extract one sample at a time. armadillo is column major, just like rankings
-  fit <- run_mcmc_cluster(rankings = t(rankings),
+  fit <- run_mcmc(rankings = t(rankings),
+                  constraints = constraints,
                   nmc = nmc,
                   cardinalities = logz_list$cardinalities,
                   logz_estimate = logz_list$logz_estimate,
@@ -90,6 +137,8 @@ compute_mallows_cluster <- function(rankings ,
                   psi = psi,
                   include_wcd = include_wcd,
                   clus_thin = clus_thin,
+                  aug_thinning = aug_thinning,
+                  save_aug = save_aug ,
                   verbose = verbose
   )
   
@@ -100,7 +149,7 @@ compute_mallows_cluster <- function(rankings ,
   # Change rho_acceptance and alpha_acceptance from frequency to relative frequency
   fit$rho_acceptance <- fit$rho_acceptance/nmc
   fit$alpha_acceptance <- fit$alpha_acceptance/nmc
-  
+  fit$aug_acceptance <- fit$aug_acceptance/nmc
   
   # Add some arguments
   fit$metric <- metric
@@ -113,6 +162,8 @@ compute_mallows_cluster <- function(rankings ,
   fit$n_clusters <- n_clusters
   fit$include_wcd <- include_wcd
   fit$clus_thin <- clus_thin 
+  fit$save_aug <- save_aug
+  fit$aug_thinning <- aug_thinning
   
   # Add names of item
   if(!is.null(colnames(rankings))) {
@@ -121,7 +172,7 @@ compute_mallows_cluster <- function(rankings ,
     fit$items <- paste("Item", seq(from = 1, to = nrow(fit$rho), by = 1))
   }
   
-  fit <- tidy_mcmc_cluster(fit)
+  fit <- tidy_mcmc(fit)
   
   # Add class attribute
   class(fit) <- "myBayesMallows"

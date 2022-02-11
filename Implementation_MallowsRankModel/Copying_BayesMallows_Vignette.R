@@ -119,16 +119,14 @@ attributes(bmm)
 plot_elbow(bmm, burnin=5000)
 
 tic('mcmc')
-bmm_sushi<-compute_mallows(rankings=sushi_rankings, n_clusters = 3,  nmc=100000, save_clus=T, clus_thin = 10, rho_thinning = 10, verbose =T )
+bmm_sushi<-compute_mallows(rankings=sushi_rankings, n_clusters = 3,  nmc=30000, save_clus=T, clus_thin = 10, rho_thinning = 10, verbose =T )
 toc()
 # elapsed time is 5`28``
 
-bmm_sushi$burnin<-5000
+bmm_sushi$burnin<-2000
 plot(bmm_sushi, parameter='cluster_probs')
 plot(bmm_sushi, parameter='cluster_assignment')
 
-## There is something wrong in implementing cluster model...
-## All assessors happen to fall in only one cluster...
 
 library(tidyr)
 compute_consensus(bmm_sushi) %>%

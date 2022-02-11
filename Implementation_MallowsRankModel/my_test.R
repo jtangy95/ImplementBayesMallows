@@ -103,7 +103,8 @@ predict_top_k(fit, k = 7) %>% filter(assessor ==10)
 compute_consensus(fit, parameter = "rho", type = "CP")
 
 source("/Users/changtaeyeong/Desktop/BayesMallowsRankModel/ImplementBayesMallows/Implementation_MallowsRankModel/my_compute_mallows_cluster.R")
-
+source("/Users/changtaeyeong/Desktop/BayesMallowsRankModel/ImplementBayesMallows/Implementation_MallowsRankModel/my_tidy_mcmc_cluster.R")
+source("/Users/changtaeyeong/Desktop/BayesMallowsRankModel/ImplementBayesMallows/Implementation_MallowsRankModel/my_plot.BayesMallows_cluster.R")
 fit = compute_mallows_cluster(potato, verbose = T, nmc = 1000, n_clusters = 2)
 fit$rho[,,1]
 fit$rho[,,100]
@@ -113,14 +114,38 @@ fit$cluster_probs[, 900]
 fit$cluster_assignment[, 10:30]
 fit$cluster_assignment[, 80:100]
 
-fit = compute_mallows_cluster(sushi_rankings, nmc = 10000, verbose = T, n_clusters = 3)
-fit$rho[,,1]
-fit$rho[,,100]
+fit = compute_mallows_cluster(sushi_rankings, nmc = 30000, verbose = T, n_clusters = 3, clus_thin = 10, rho_thinning = 10)
+
+library(dplyr)
+fit$rho %>% filter(iteration == 1, cluster == "Cluster 1")
+fit$rho %>% filter(iteration == 1, cluster == "Cluster 2")
+fit$rho %>% filter(iteration == 1, cluster == "Cluster 3")
+
+fit$rho %>% filter(iteration == 501, cluster == "Cluster 1")
+fit$rho %>% filter(iteration == 501, cluster == "Cluster 2")
+fit$rho %>% filter(iteration == 501, cluster == "Cluster 3")
+
 fit$rho_acceptance
 fit$alpha_acceptance
-fit$cluster_probs[, 900]
-fit$cluster_assignment[1:40, 10:30]
-fit$cluster_assignment[1:40, 80:100]
-fit$cluster_assignment[1:40, 1000:1020]
-fit$cluster_assignment[1:40, 3000:3020]
-fit$cluster_assignment[1:40, 9000:9020]
+
+fit$cluster_probs
+fit$cluster_probs %>% filter(iteration > 500 & iteration < 530)
+fit$cluster_assignment 
+fit$cluster_assignment %>% filter(iteration > 10 & iteration < 100) %>% filter(assessor == 1)
+fit$cluster_assignment %>% filter(iteration > 10 & iteration < 100) %>% filter(assessor == 1000)
+fit$cluster_assignment %>% filter(iteration > 10 & iteration < 100) %>% filter(assessor == 3000)
+fit$cluster_assignment %>% filter(iteration > 1000 & iteration < 1100) %>% filter(assessor == 1)
+fit$cluster_assignment %>% filter(iteration > 1000 & iteration < 1100) %>% filter(assessor == 1000)
+
+fit$within_cluster_distance
+fit$within_cluster_distance %>% filter(iteration == 10000)
+
+fit$burnin = 1000
+plot(fit, parameter = "alpha")
+plot(fit, parameter = "rho", items = c(1,3,5,7))
+plot(fit, parameter = "rho", items = c("shrimp", "egg", "squid"))
+plot(fit, parameter = "cluster_probs")
+plot(fit, parameter = "cluster_assignment")
+
+compute_consensus(fit, type = "CP", parameter = "rho")
+compute_consensus(fit, type = "MAP", parameter = "rho")
