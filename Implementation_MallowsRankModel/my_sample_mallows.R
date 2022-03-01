@@ -6,9 +6,8 @@ validate_permutation <- function(vec){
   return(all(sort(vec) == seq_along(vec)))
 }
 
-sample_mallows <- function(rho0, alpha0, n_samples, n_clusters = 1L, 
+sample_mallows <- function(rho0, alpha0, n_samples,
                            leap_size = max(1L, floor(length(rho0)/5)),
-                           psi = n_samples / n_clusters,
                            metric = "footrule",
                            burnin = 1000,
                            thinning = 1000){
@@ -38,7 +37,7 @@ sample_mallows <- function(rho0, alpha0, n_samples, n_clusters = 1L,
 }
 
 sample_mallows_mixed <- function(rho0, alpha0, n_samples, n_clusters = 1L, 
-                           leap_size = max(1L, floor(length(rho0)/5)),
+                           leap_size = max(1L, floor(nrow(rho0)/5)),
                            psi = n_samples / n_clusters,
                            metric = "footrule",
                            burnin = 1000,

@@ -158,6 +158,10 @@ find_cpc_cluster <- function(group_df){
     result <- dplyr::bind_rows(result,
                                dplyr::select(tmp_df, cluster, ranking, item, cumprob))
     
+    if(nrow(result) == n_items){
+      break
+    }
+    
   }
   result <- dplyr::group_by(result, cluster)
   result <- dplyr::arrange(result, ranking, .by_group = TRUE)
@@ -195,6 +199,10 @@ find_cpc <- function(group_df){
     # Select the columns we want to keep, and put them in result
     result <- dplyr::bind_rows(result,
                                dplyr::select(tmp_df, ranking, item, cumprob))
+    
+    if(nrow(result) == n_items){
+      break
+    }
     
   }
   return(result)

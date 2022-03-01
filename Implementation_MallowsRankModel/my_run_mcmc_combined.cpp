@@ -93,8 +93,9 @@ Rcpp::List run_mcmc(arma::mat rankings,  Rcpp::List constraints,
     augmented_data.set_size(n_items, n_assessors, std::ceil(static_cast<double>(nmc * 1.0 / aug_thinning)));
     augmented_data.slice(0) = rankings ;
   }
+
   if(verbose){
-        Rcpp::Rcout << "augment_data is initialized" << std::endl;
+        Rcpp::Rcout << "augmented_data is initialized" << std::endl;
         Rcpp::Rcout << "size of augmented_data is " << size(augmented_data) << std::endl;
     }
  
