@@ -4,7 +4,6 @@
 #include "my_partitionfuns.h"
 
 // [[Rcpp::depends(RcppArmadillo)]]
-// [[Rcpp::export]]
 void update_rho(arma::cube& rho, arma::uvec& rho_acceptance, arma::mat& rho_current,
                 int& rho_index,  const int& cluster_index , const int& rho_thinning,
                 const double& alpha_current, const int& leap_size, const arma::mat& rankings, const std::string& metric, 
@@ -54,6 +53,7 @@ void update_rho(arma::cube& rho, arma::uvec& rho_acceptance, arma::mat& rho_curr
 
 }
 
+// [[Rcpp::depends(RcppArmadillo)]]
 double update_alpha(arma::uvec& alpha_acceptance,
                   const double& alpha_current,
                   const arma::mat& rankings,

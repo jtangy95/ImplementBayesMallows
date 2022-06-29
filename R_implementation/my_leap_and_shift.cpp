@@ -1,7 +1,6 @@
 #include <RcppArmadillo.h>
 
 // [[Rcpp::depends(RcppArmadillo)]]
-// [[Rcpp::export]]
 void shift_step(arma::vec& rho_proposal, const arma::vec& rho_current,
                 const int& u, double& delta_r, arma::uvec& indices){
   // Shift step:
@@ -27,7 +26,7 @@ void shift_step(arma::vec& rho_proposal, const arma::vec& rho_current,
   // Note : "indices" were a NULL vector initially set in defining "update_rho" function in parameterupdates.cpp and after the `shift_step`, "indices" becomes a set of index among {1,2,...,n} on which "rho_old" and "rho_proposal" are distinct.
 }
 
-// [[Rcpp::export]]
+// [[Rcpp::depends(RcppArmadillo)]]
 void leap_and_shift(arma::vec& rho_proposal, arma::uvec& indices,
                     double& prob_backward, double& prob_forward,
                     const arma::vec& rho_current, int leap_size){
