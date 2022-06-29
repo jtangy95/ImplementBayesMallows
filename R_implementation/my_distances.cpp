@@ -1,20 +1,19 @@
 #include <RcppArmadillo.h>
 
 // [[Rcpp::depends(RcppArmadillo)]]
-// [[Rcpp::export]]
 double footrule_distance(const arma::vec& r1, const arma::vec& r2){
   return arma::norm(r1 - r2, 1);
   // Note : `norm(X,p)` computes the p-norm of X where X can be a vector or matrix.
 }
 
-// [[Rcpp::export]]
+// [[Rcpp::depends(RcppArmadillo)]]
 double spearman_distance(const arma::vec& r1, const arma::vec& r2){
     double a = arma::norm(r1 - r2, 2) ;
   return a * a ;
   
 }
 
-// [[Rcpp::export]]
+// [[Rcpp::depends(RcppArmadillo)]]
 double  get_rank_distance(arma::vec r1, arma::vec r2, std::string metric){
 
   if (r1.n_elem != r2.n_elem){
@@ -30,7 +29,7 @@ double  get_rank_distance(arma::vec r1, arma::vec r2, std::string metric){
   }
 }
 
-// [[Rcpp::export]]
+// [[Rcpp::depends(RcppArmadillo)]]
 arma::vec rank_dist_vec(const arma::mat& rankings,
                         const arma::vec& rho,
                         const std::string& metric){
@@ -47,8 +46,7 @@ arma::vec rank_dist_vec(const arma::mat& rankings,
   return(result);
 }
 
-
-// [[Rcpp::export]]
+// [[Rcpp::depends(RcppArmadillo)]]
 double rank_dist_sum(const arma::mat& rankings, const arma::vec& rho,
                      const std::string& metric){
   return arma::sum(rank_dist_vec(rankings, rho, metric));

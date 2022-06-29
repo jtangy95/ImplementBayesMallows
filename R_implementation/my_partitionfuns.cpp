@@ -1,7 +1,6 @@
 #include <RcppArmadillo.h>
 
 // [[Rcpp::depends(RcppArmadillo)]]
-// [[Rcpp::export]]
 // Helper to compute the importance sampling smoothed fit
 double compute_is_fit(double alpha, arma::vec fit){
   // Note : Here, input "fit" is a beta.values of polynomials estimating partition function log{Z_n(alpha)}
@@ -16,7 +15,6 @@ double compute_is_fit(double alpha, arma::vec fit){
 }
 
 // [[Rcpp::depends(RcppArmadillo)]]
-// [[Rcpp::export]]
 int binomial_coefficient(int n, int k){
 
   // Special case:
@@ -39,7 +37,6 @@ int binomial_coefficient(int n, int k){
 }
 
 // [[Rcpp::depends(RcppArmadillo)]]
-// [[Rcpp::export]]
 double logz_cardinalities(const double& alpha, const int& n_items, const arma::vec& cardinalities, const std::string& metric){
   if(metric == "footrule"){
     arma::vec distances = arma::regspace(0, 2, std::floor(std::pow(static_cast<double>(n_items), 2.) / 2));
@@ -55,7 +52,6 @@ double logz_cardinalities(const double& alpha, const int& n_items, const arma::v
 }
 
 // [[Rcpp::depends(RcppArmadillo)]]
-// [[Rcpp::export]]
 double get_partition_function(int n_items, double alpha,
                               const Rcpp::Nullable<arma::vec> cardinalities = R_NilValue,
                               const Rcpp::Nullable<arma::vec> logz_estimate = R_NilValue,
