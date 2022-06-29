@@ -1,6 +1,10 @@
 library(Rcpp)
 library(RcppArmadillo)
-sourceCpp('/Users/changtaeyeong/Desktop/BayesMallowsRankModel/ImplementBayesMallows/Implementation_MallowsRankModel/my_sample_mallows.cpp')
+
+## set working directory to use relative path
+setwd("/Users/changtaeyeong/Desktop/BayesMallowsRankModel/ImplementBayesMallows/R_implementation")
+
+sourceCpp('./my_sample_mallows.cpp')
 
 validate_permutation <- function(vec){
   return(all(sort(vec) == seq_along(vec)))
