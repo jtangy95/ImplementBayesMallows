@@ -1,9 +1,15 @@
+library(Rcpp)
+library(RcppArmadillo)
 
 validate_permutation <- function(vec){
  return(all(sort(vec) == seq_along(vec)))
 }
 
-sourceCpp('/Users/changtaeyeong/Desktop/BayesMallowsRankModel/ImplementBayesMallows/Implementation_MallowsRankModel/my_run_mcmc.cpp')
+
+## set working directory to use relative path
+setwd("/Users/changtaeyeong/Desktop/BayesMallowsRankModel/ImplementBayesMallows/R_implementation")
+
+sourceCpp('./my_run_mcmc.cpp')
 
 compute_mallows <- function(rankings ,
                             metric = "footrule",

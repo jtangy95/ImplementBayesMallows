@@ -1,14 +1,17 @@
-source("/Users/changtaeyeong/Desktop/BayesMallowsRankModel/ImplementBayesMallows/Implementation_MallowsRankModel/my_compute_mallows_combined.R")
-source("/Users/changtaeyeong/Desktop/BayesMallowsRankModel/ImplementBayesMallows/Implementation_MallowsRankModel/my_plot.BayesMallows_cluster.R")
-source("/Users/changtaeyeong/Desktop/BayesMallowsRankModel/ImplementBayesMallows/Implementation_MallowsRankModel/my_compute_consensus.R")
-source("/Users/changtaeyeong/Desktop/BayesMallowsRankModel/ImplementBayesMallows/Implementation_MallowsRankModel/my_topk.R")
-load(file = "/Users/changtaeyeong/Desktop/BayesMallowsRankModel/ImplementBayesMallows/Implementation_MallowsRankModel/dataset_potatoes.RData", verbose = T)
-load(file = "/Users/changtaeyeong/Desktop/BayesMallowsRankModel/ImplementBayesMallows/Implementation_MallowsRankModel/dataset_sushi.RData", verbose = T)
-load(file = "/Users/changtaeyeong/Desktop/BayesMallowsRankModel/ImplementBayesMallows/Implementation_MallowsRankModel/dataset_beach.RData", verbose = T)
+## set working directory to use relative path
+setwd("/Users/changtaeyeong/Desktop/BayesMallowsRankModel/ImplementBayesMallows/R_implementation")
+
+source("./my_compute_mallows_combined.R")
+source("./my_plot.BayesMallows_cluster.R")
+source("./my_compute_consensus.R")
+source("./my_topk.R")
+load(file = "./dataset_potatoes.RData", verbose = T)
+load(file = "./dataset_sushi.RData", verbose = T)
+load(file = "./dataset_beach.RData", verbose = T)
 library(dplyr)
 
-fit = compute_mallows(potatoes_rank$visual_assess, verbose = F, nmc = 100000)
-fit_is = compute_mallows(potatoes_rank$visual_assess, verbose = F, nmc = 100000, importance_sampling = T)
+fit = compute_mallows(potatoes_rank$visual_assess, verbose = T, nmc = 10000)
+fit_is = compute_mallows(potatoes_rank$visual_assess, verbose = T, nmc = 10000, importance_sampling = T)
 
 fit$rho
 fit$alpha
@@ -28,8 +31,8 @@ compute_consensus(fit, parameter = "rho" , type = "CP")
 compute_consensus(fit, parameter = "rho" , type = "MAP")
 
 
-fit = compute_mallows(sushi_rankings, nmc = 100000, verbose = F)
-fit_is = compute_mallows(sushi_rankings, nmc = 100000, verbose = F, importance_sampling = T)
+fit = compute_mallows(sushi_rankings, nmc = 10000, verbose = T)
+fit_is = compute_mallows(sushi_rankings, nmc = 10000, verbose = T, importance_sampling = T)
 
 fit$rho
 fit$alpha
@@ -49,7 +52,7 @@ compute_consensus(fit_is, parameter = "rho" , type = "CP")
 compute_consensus(fit_is, parameter = "rho" , type = "MAP")
 
 
-fit = compute_mallows(sushi_rankings, nmc = 100000, verbose = T, n_clusters = 6, clus_thin = 10, rho_thinning = 10)
+fit = compute_mallows(sushi_rankings, nmc = 10000, verbose = T, n_clusters = 5, clus_thin = 10, rho_thinning = 10)
 
 fit$rho %>% filter(iteration == 1, cluster == "Cluster 1")
 fit$rho %>% filter(iteration == 1, cluster == "Cluster 2")
@@ -76,23 +79,23 @@ fit$within_cluster_distance %>% filter(iteration == 10000)
 
 fit$burnin = 1000
 plot(fit, parameter = "alpha")
-plot(fit, parameter = "rho", items = c(1,3,5,7,9,10))
+plot(fit, parameter = "rho", items = c(1,3,5))
 plot(fit, parameter = "rho", items = c("shrimp", "egg", "squid"))
 plot(fit, parameter = "cluster_probs")
 plot(fit, parameter = "cluster_assignment")
 
-compute_consensus(fit, type = "CP", parameter = "rho") %>% filter(cluster == "Cluster 5")
-compute_consensus(fit, type = "MAP", parameter = "rho") %>% filter(cluster == "Cluster 5")
+compute_consensus(fit, type = "CP", parameter = "rho") %>% filter(cluster == "Cluster 3")
+compute_consensus(fit, type = "MAP", parameter = "rho") %>% filter(cluster == "Cluster 3")
 
 
-fit = compute_mallows(preferences = beach_preferences, nmc = 1e6, verbose = T,
+fit = compute_mallows(preferences = beach_preferences, nmc = 1e4, verbose = T,
                       leap_size = 2, alpha_prop_sd = 0.1, lambda = 0.1, alpha_jump =  100, save_aug = T, aug_thinning = 100)
 fit$rho
 fit$alpha
 fit$rho_acceptance
 fit$alpha_acceptance
 fit$save_aug
-fit$burnin = 1e5
+fit$burnin = 1e3
 compute_consensus(fit, parameter = "rho", type = "CP")
 fit$augmented_data %>% filter(assessor == 3, iteration == 1001)
 fit$augmented_data %>% filter(assessor == 3, iteration == 2001)
@@ -104,14 +107,15 @@ compute_consensus(fit, parameter = "Rtilde", type = "MAP", assessors = c(2,3))
 predict_top_k(fit, k = 3) %>% filter(assessor ==1)
 predict_top_k(fit, k = 3) %>% filter(assessor ==10)
 plot_top_k(fit, k=3, assessors = 1:20)
+plot_top_k(fit, k=3, assessors = c(1,3,5,7,9))
 
 source("/Users/changtaeyeong/Desktop/BayesMallowsRankModel/BayesMallows/R/compute_mallows_mixtures.R")
 source("/Users/changtaeyeong/Desktop/BayesMallowsRankModel/BayesMallows/R/plot_elbow.R")
 library(parallel)
 (nCores=detectCores()-1)
 cl<-makeCluster(nCores)
-mixtures = compute_mallows_mixtures(n_clusters=1:10, rankings=sushi_rankings, nmc=100000, 
+mixtures = compute_mallows_mixtures(n_clusters=3:5, rankings=sushi_rankings, nmc=10000, 
                                     rho_thinning = 10, clus_thin = 10, include_wcd=T)
-plot_elbow(mixtures, burnin=5000)
+plot_elbow(mixtures, burnin=1000)
 
 

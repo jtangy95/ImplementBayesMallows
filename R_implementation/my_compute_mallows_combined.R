@@ -2,7 +2,7 @@ library(Rcpp)
 library(RcppArmadillo)
 
 # validate_permutation prepared also for incomplete ranking
-validate_permutation_na <- function(vec){
+validate_permutation <- function(vec){
   if(!any(is.na(vec))){
     # complete ranking
     return(all(sort(vec) == seq_along(vec)))
@@ -16,14 +16,19 @@ validate_permutation_na <- function(vec){
   }
 }
 
-source("/Users/changtaeyeong/Desktop/BayesMallowsRankModel/ImplementBayesMallows/Implementation_MallowsRankModel/my_partition_function.R")
-source("/Users/changtaeyeong/Desktop/BayesMallowsRankModel/ImplementBayesMallows/Implementation_MallowsRankModel/my_tidy_mcmc_combined.R")
+## set working directory to use relative path
+setwd("/Users/changtaeyeong/Desktop/BayesMallowsRankModel/ImplementBayesMallows/R_implementation")
+
+source("./my_partition_function.R")
+source("./my_tidy_mcmc_combined.R")
+
+## need some R functions in BayesMallows package : related to generating initial setting for pairwise comparison 
 source("/Users/changtaeyeong//Desktop/BayesMallowsRankModel/BayesMallows/R/generate_transitive_closure.R")
 source("/Users/changtaeyeong//Desktop/BayesMallowsRankModel/BayesMallows/R/generate_initial_ranking.R")
 source("/Users/changtaeyeong//Desktop/BayesMallowsRankModel/BayesMallows/R/generate_constraints.R")
 source("/Users/changtaeyeong//Desktop/BayesMallowsRankModel/BayesMallows/R/rank_conversion.R")
 
-sourceCpp('/Users/changtaeyeong/Desktop/BayesMallowsRankModel/ImplementBayesMallows/Implementation_MallowsRankModel/my_run_mcmc_combined.cpp')
+sourceCpp('./my_run_mcmc_combined.cpp')
 
 compute_mallows <- function(rankings = NULL ,
                             preferences = NULL, 
@@ -72,7 +77,7 @@ compute_mallows <- function(rankings = NULL ,
   if(lambda <= 0) stop("exponential rate parameter lambda must be strictly positive")
   
   # Check that all rows of rankings are proper permutations
-  if(!is.null(rankings) && validate_rankings && !all(apply(rankings, 1, validate_permutation_na))){
+  if(!is.null(rankings) && validate_rankings && !all(apply(rankings, 1, validate_permutation))){
     stop("invalid permutations provided in rankings matrix")
   }
   

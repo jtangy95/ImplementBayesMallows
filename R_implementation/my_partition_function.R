@@ -1,8 +1,11 @@
-load("/Users/changtaeyeong/Desktop/BayesMallowsRankModel/ImplementBayesMallows/Implementation_MallowsRankModel/my_partition_function_data.RData", verbose = T)
-
 library(Rcpp)
 library(RcppArmadillo)
-sourceCpp('/Users/changtaeyeong/Desktop/BayesMallowsRankModel/ImplementBayesMallows/Implementation_MallowsRankModel/my_importance_sampling.cpp')
+
+## set working directory to use relative path
+setwd("/Users/changtaeyeong/Desktop/BayesMallowsRankModel/ImplementBayesMallows/R_implementation")
+
+sourceCpp('./my_importance_sampling.cpp')
+load("./my_partition_function_data.RData", verbose = T)
 
 # library(parallel)
 # cl <- makeCluster(detectCores() - 1)
@@ -79,3 +82,4 @@ prepare_partition_function <- function(importance_sampling, exact_available, log
   }
   
 }
+

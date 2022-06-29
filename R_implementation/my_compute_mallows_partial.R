@@ -1,3 +1,5 @@
+library(Rcpp)
+library(RcppArmadillo)
 
 # validate_permutation prepared also for incomplete ranking
 validate_permutation <- function(vec){
@@ -14,7 +16,10 @@ validate_permutation <- function(vec){
   }
 }
 
-sourceCpp('/Users/changtaeyeong/Desktop/BayesMallowsRankModel/ImplementBayesMallows/Implementation_MallowsRankModel/my_run_mcmc_partial.cpp')
+## set working directory to use relative path
+setwd("/Users/changtaeyeong/Desktop/BayesMallowsRankModel/ImplementBayesMallows/R_implementation")
+
+sourceCpp('./my_run_mcmc_partial.cpp')
 
 compute_mallows_partial <- function(rankings ,
                             metric = "footrule",

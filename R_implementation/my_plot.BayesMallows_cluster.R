@@ -1,4 +1,7 @@
-source("/Users/changtaeyeong/Desktop/BayesMallowsRankModel/ImplementBayesMallows/Implementation_MallowsRankModel/my_assign_cluster.R")
+## set working directory to use relative path
+setwd("/Users/changtaeyeong/Desktop/BayesMallowsRankModel/ImplementBayesMallows/R_implementation")
+
+source("./my_assign_cluster.R")
 
 plot.myBayesMallows <- function(x, burnin = x$burnin, parameter = "alpha", items = NULL, ...){
   # Note, the first argument must be named x, otherwise R CMD CHECK will
