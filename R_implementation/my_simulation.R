@@ -1,8 +1,11 @@
-source("/Users/changtaeyeong/Desktop/BayesMallowsRankModel/ImplementBayesMallows/Implementation_MallowsRankModel/my_sample_mallows.R")
-source("/Users/changtaeyeong/Desktop/BayesMallowsRankModel/ImplementBayesMallows/Implementation_MallowsRankModel/my_compute_mallows_combined.R")
-source("/Users/changtaeyeong/Desktop/BayesMallowsRankModel/ImplementBayesMallows/Implementation_MallowsRankModel/my_plot.BayesMallows_cluster.R")
-source("/Users/changtaeyeong/Desktop/BayesMallowsRankModel/ImplementBayesMallows/Implementation_MallowsRankModel/my_compute_consensus.R")
-source("/Users/changtaeyeong/Desktop/BayesMallowsRankModel/ImplementBayesMallows/Implementation_MallowsRankModel/my_topk.R")
+## set working directory to use relative path
+setwd("/Users/changtaeyeong/Desktop/BayesMallowsRankModel/ImplementBayesMallows/R_implementation")
+
+source("./my_sample_mallows.R")
+source("./my_compute_mallows_combined.R")
+source("./my_plot.BayesMallows_cluster.R")
+source("./my_compute_consensus.R")
+source("./my_topk.R")
 
 source("/Users/changtaeyeong/Desktop/BayesMallowsRankModel/BayesMallows/R/compute_mallows_mixtures.R")
 source("/Users/changtaeyeong/Desktop/BayesMallowsRankModel/BayesMallows/R/plot_elbow.R")
@@ -137,17 +140,18 @@ true
 
 
 # Application to real data : movie ratings in TMDB
+setwd("/Users/changtaeyeong/Desktop/BayesMallowsRankModel/ImplementBayesMallows/DATA")
 
-data = read.csv(file = "/Users/changtaeyeong/Downloads/ratings_small.csv")
+data = read.csv(file = "./ratings_small.csv")
 data  = tibble(data)
 data = data %>% select(-timestamp)
-links = read.csv(file = "/Users/changtaeyeong/Downloads/links_small.csv")
+links = read.csv(file = "./links_small.csv")
 links = tibble(links)
 links = links %>% select(-imdbId)
 data2 = inner_join(data, links, by = "movieId")
 data2 = data2 %>% mutate(across(c(userId, movieId, tmdbId), as.character))
 
-names = read.csv(file = "/Users/changtaeyeong/Downloads/movies_metadata.csv")
+names = read.csv(file = "./movies_metadata.csv")
 names = tibble(names)
 names = names %>% select(c(id, title))
 
