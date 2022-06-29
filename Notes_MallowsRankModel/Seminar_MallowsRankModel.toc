@@ -1,9 +1,0 @@
-\babel@toc {english}{}
-\beamer@sectionintoc {1}{Motivation}{3}{0}{1}
-\beamer@sectionintoc {2}{A Bayesian Mallows model for complete rankings}{7}{0}{2}
-\beamer@sectionintoc {3}{Approximating the Partition Function $Z_n(\alpha )$ via Off-line Importance Sampling}{28}{0}{3}
-\beamer@sectionintoc {4}{Extensions to Partial Rankings and Heterogeneous Assessor Pool}{48}{0}{4}
-\beamer@subsectionintoc {4}{1}{Ranking of the Top Ranked Items}{50}{0}{4}
-\beamer@subsectionintoc {4}{2}{Pairwise Comparison}{57}{0}{4}
-\beamer@subsectionintoc {4}{3}{Clustering Assessors based on their Complete Rankings}{61}{0}{4}
-\beamer@sectionintoc {5}{Discussion and Examples}{69}{0}{5}
